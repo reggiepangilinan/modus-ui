@@ -1,0 +1,80 @@
+// COLOURS
+$black: #000000 !default;
+$white: #fff !default;
+$brand-color: #2494b5 !default;
+$brand-dark-color: #003d5b !default;
+$shadow-color: #e5e5e5;
+$border-color: #e5e5e5;
+
+$success-color: #42c379 !default;
+$info-color: #007af8 !default;
+$warning-color: #ff9347 !default;
+$error-color: #ff4260 !default;
+
+$primary-text-color: #2d2c2c !default;
+$secondary-text-color: #707070 !default;
+$highlight-text-color: $brand-color !default;
+
+$primary-bg-color: $white !default;
+$secondary-bg-color: #f2f2f2 !default;
+$highlight-bg-color: #eaf1f9 !default;
+
+$primary-button-color: $brand-color !default;
+$secondary-button-color: $brand-dark-color !default;
+$disabled-button-color: #e5e5e5 !default;
+
+$disabled-input-color: #f4f4f4 !default;
+// =====================================================
+
+$theme-planit: (
+  header-bg: $brand-dark-color,
+  header-text: $black,
+  button-text: $white,
+  button-primary-bg: $brand-color,
+  button-secondary-bg: darken($secondary-button-color, 11%),
+  button-disabled-bg: $disabled-button-color,
+  button-light-bg: darken($secondary-bg-color, 5%),
+  button-outline-bg: transparent,
+  button-outline-color: $black,
+  text-input-border: $shadow-color,
+  text-input-border-focus: $brand-color,
+  text-input-error: $error-color,
+  popupmenuitem-bg: $brand-color,
+  popupmenuitem-text: $white,
+  iconbutton-dark-bg: $brand-dark-color,
+  iconbutton-dark-color: $white,
+  iconbutton-light-bg: darken($secondary-bg-color, 5%),
+  iconbutton-light-color: $brand-dark-color,
+  radiobutton-color: $brand-color,
+  radiobutton-disabled-color: $disabled-input-color,
+  checkbox-color: $brand-color
+);
+
+$theme-maddocks: (
+  header-bg: lighten(black, 10%),
+  header-text: darken(black, 50%),
+  button-text: $white,
+  button-primary-bg: maroon,
+  button-secondary-bg: lighten(black, 20%),
+  button-disabled-bg: lighten(black, 30%),
+  button-light-bg: darken($secondary-bg-color, 5%),
+  button-outline-bg: $white,
+  button-outline-color: $black,
+  text-input-border: $shadow-color,
+  text-input-border-focus: maroon,
+  text-input-error: $error-color,
+  popupmenuitem-bg: maroon,
+  popupmenuitem-text: $white,
+  iconbutton-dark-bg: lighten(black, 10%),
+  iconbutton-dark-color: $white,
+  iconbutton-light-bg: darken($secondary-bg-color, 5%),
+  iconbutton-light-color: $brand-dark-color,
+  radiobutton-color: maroon,
+  radiobutton-disabled-color: $disabled-input-color,
+  checkbox-color: maroon
+);
+
+$themes-map: (
+  planit: $theme-planit,
+  maddocks: $theme-maddocks
+);
