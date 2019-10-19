@@ -1,0 +1,12 @@
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+@import './styles/themes.scss';
+
+html,
+body {
+  font-family: $font-family;
+  font-size: $base-font-size;
+  color: $primary-text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

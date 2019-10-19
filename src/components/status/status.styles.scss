@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
+@import '../../styles/themes.scss';
+
+.content {
+  font-size: 0.9em;
+  font-weight: 600;
+  min-width: 80px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.success {
+  background-color: $success-color;
+  color: $white;
+}
+
+.info {
+  background-color: $info-color;
+  color: $white;
+}
+
+.warning {
+  background-color: $warning-color;
+  color: $white;
+}
+
+.error {
+  background-color: $error-color;
+  color: $white;
+}
+
+.light {
+  background-color: darken($primary-bg-color, 10%);
+  color: lighten($primary-text-color, 30%);
+}

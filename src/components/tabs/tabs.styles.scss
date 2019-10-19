@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/animations.scss';
+@import '../../styles/themes.scss';
+
+.tabsContainer {
+  margin: 10px 0px;
+  display: flex;
+}
+
+.tabItemContainer {
+  font-weight: 600;
+
+  .tabActive {
+    border-radius: 2px;
+    min-width: 150px;
+    cursor: pointer;
+    border-bottom: 1.5px solid $brand-color;
+    margin-right: 10px;
+    line-height: 35px;
+    label {
+      margin: 10px 0px 0px 10px;
+    }
+
+    color: $brand-dark-color;
+    &:hover {
+      background-color: darken($primary-bg-color, 7%);
+    }
+    transition: all 0.4s ease-in-out;
+  }
+
+  .tab {
+    border-radius: 2px;
+    min-width: 150px;
+    cursor: pointer;
+    border-bottom: 1.5px solid $border-color;
+    margin-right: 10px;
+    line-height: 35px;
+    label {
+      margin: 10px 0px 0px 10px;
+    }
+    color: lighten($primary-text-color, 35%);
+    &:hover {
+      background-color: darken($primary-bg-color, 2%);
+    }
+  }
+}

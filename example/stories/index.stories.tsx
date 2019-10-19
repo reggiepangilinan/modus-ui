@@ -1,0 +1,1 @@
+import '../stories/index.scss';

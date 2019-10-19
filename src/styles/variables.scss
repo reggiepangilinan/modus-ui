@@ -1,20 +1,10 @@
-@font-face {
-  font-display: swap;
-  font-family: 'Inter';
-  font-style: normal;
-  src: url('https://s3-ap-southeast-2.amazonaws.com/public-zenith.infotrack.com.au/fonts/inter/Inter-Regular.woff2')
-      format('woff2'),
-    url('https://s3-ap-southeast-2.amazonaws.com/public-zenith.infotrack.com.au/fonts/inter/Inter-Regular.woff')
-      format('woff');
-}
-
 // TYPOGRAPHY
-$font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
   'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif !default;
 $font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace !default;
-$base-font-size: 13px;
+$base-font-size: 14px;
 
 // LAYOUT SIZES
 $header-height: 64px !default;
