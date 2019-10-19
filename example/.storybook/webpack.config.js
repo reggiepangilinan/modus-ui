@@ -1,6 +1,6 @@
 module.exports = _base => {
   _base.config.module.rules.push({
-    test: /\.tsx?$/,
+    test: /\.(ts|tsx)$/,
     use: [
       {
         loader: require.resolve('babel-loader'),
