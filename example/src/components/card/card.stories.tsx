@@ -1,12 +1,18 @@
 import React, { ReactElement } from 'react';
-import { storiesOf } from '@storybook/react';
 import { Card } from './index';
 
-storiesOf('Shared|Components/Card', module).add(
-  'Default',
-  (): ReactElement => (
+export default {
+  title: 'Components|Card',
+  component: Card
+}
+
+/**
+ * Yes
+ */
+export const card = (): ReactElement => 
     <Card>
         Test
-    </Card>
-  )
-);
+    </Card>;
+card.story = {
+name: 'Default'
+};

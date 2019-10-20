@@ -1,25 +1,65 @@
 import React, { ReactElement } from 'react';
-import { storiesOf } from '@storybook/react';
 import { Status, StatusType } from 'modus-ui';
+import { SpaceAroundStory } from '../story-wrappers/space-around-story/space-around-story.component';
 
-storiesOf('Shared|Components/Status', module)
-  .add(
-    'Success',
-    (): ReactElement => <Status type={StatusType.Success} text="Complete" />
-  )
-  .add(
-    'Warning',
-    (): ReactElement => <Status type={StatusType.Warning} text="Warning" />
-  )
-  .add(
-    'Info',
-    (): ReactElement => <Status type={StatusType.Info} text="Some info" />
-  )
-  .add(
-    'Error',
-    (): ReactElement => <Status type={StatusType.Error} text="Error" />
-  )
-  .add(
-    'Light',
-    (): ReactElement => <Status type={StatusType.Light} text="Light" />
-  );
+export default {
+  title: 'Components|Status',
+  component: Status
+}
+
+/**
+ * All Status
+ */
+export const allStatus = (): ReactElement => 
+    <>
+      <Status type={StatusType.Success} text="Complete" />
+      <Status type={StatusType.Warning} text="Warning" />
+      <Status type={StatusType.Info} text="Info" />
+      <Status type={StatusType.Error} text="Error" />
+      <Status type={StatusType.Light} text="Light" />
+    </>;
+allStatus.story = {
+name: 'All Status',
+decorators: [(storyFn : any) : ReactElement => <SpaceAroundStory>{storyFn()}</SpaceAroundStory>]
+};
+
+export const success = (): ReactElement => 
+    <>
+      <Status type={StatusType.Success} text="Complete" />  
+    </>;
+success.story = {
+name: 'Success'
+};
+
+export const warning = (): ReactElement => 
+    <>
+      <Status type={StatusType.Warning} text="Warning" />
+    </>;
+warning.story = {
+name: 'Warning'
+};
+
+export const info = (): ReactElement => 
+    <>
+      <Status type={StatusType.Info} text="Info" />
+    </>;
+info.story = {
+name: 'Info'
+};
+
+
+export const error = (): ReactElement => 
+    <>
+      <Status type={StatusType.Error} text="Error" />
+    </>;
+error.story = {
+name: 'Error'
+};
+
+export const light = (): ReactElement => 
+    <>
+      <Status type={StatusType.Light} text="Light" />
+    </>;
+light.story = {
+name: 'Light'
+};

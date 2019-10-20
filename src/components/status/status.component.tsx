@@ -33,12 +33,20 @@ const getStatusTypeStyle = (type: StatusType): string => {
   }
 };
 
+/**
+ * The `Status` component.
+ */
 export const Status: FunctionComponent<StatusProps> = (props: StatusProps): ReactElement => {
   return (
     <div
       className={`${styles.content} ${getStatusTypeStyle(props.type)}`}
+      title={props.text}
     >
       <label>{props.text}</label>
     </div>
   );
 };
+
+
+Status.defaultProps = {
+}

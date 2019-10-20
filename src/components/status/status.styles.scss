@@ -6,12 +6,13 @@
 .content {
   font-size: 0.9em;
   font-weight: 600;
-  min-width: 80px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3px;
+  min-width: 70px;
+  line-height: 99%;
+  display: inline-block;
+  border-radius: $border-radius;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 6px;
 }
 
 .success {
