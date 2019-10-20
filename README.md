@@ -1,31 +1,23 @@
 # modus-ui
 
-> 
+#### Modus - definition 📖
+> "Way in which anything is done."  
 
-[![NPM](https://img.shields.io/npm/v/modus-ui.svg)](https://www.npmjs.com/package/modus-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+`modus-ui` - Is a modern re-usable UI-Toolkit for React ⚛️that does not look back (*at Internet Explorer*).  
+Designed and engineered to
+ - Provide a clean and consistent look and feel.
+ - Speed up product development 
 
-## Install
+Under the hood - `modus-ui` uses **CSS Modules** to style the components.  
 
-```bash
-npm install --save modus-ui
+## Get Started  
+
+To install  
+
+```
+npm i --save `modus-ui`
 ```
 
-## Usage
-
-```tsx
-import * as React from 'react'
-
-import MyComponent from 'modus-ui'
-
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
-
-## License
+Modus-UI is open-source. Here is the link to repo https://github.com/reggieboyYEAH/modus-ui
 
 MIT © [reggieboyYEAH](https://github.com/reggieboyYEAH)

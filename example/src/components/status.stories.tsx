@@ -63,3 +63,11 @@ export const light = (): ReactElement =>
 light.story = {
 name: 'Light'
 };
+
+export const longText = (): ReactElement => 
+    <>
+      <Status type={StatusType.Success} text="This is a very very very long text for a status" />
+    </>;
+longText.story = {
+name: 'A very long text'
+};

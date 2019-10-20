@@ -46,7 +46,3 @@ export const Status: FunctionComponent<StatusProps> = (props: StatusProps): Reac
     </div>
   );
 };
-
-
-Status.defaultProps = {
-}
