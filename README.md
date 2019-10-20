@@ -1,7 +1,10 @@
 # modus-ui
 
+>
+![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red "Work in progress")
+
 #### Modus - definition 📖
-> "Way in which anything is done."  
+> "Way in which anything is done." 
 
 `modus-ui` - Is a modern re-usable UI-Toolkit for React ⚛️that does not look back (*at Internet Explorer*).  
 Designed and engineered to
