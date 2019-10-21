@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import { Status, StatusType } from 'modus-ui';
 import { SpaceAroundStory } from '../story-wrappers/space-around-story/space-around-story.component';
+import { ReactNode } from 'react';
 
 export default {
   title: 'Components|Status',
@@ -20,7 +21,7 @@ export const allStatus = (): ReactElement =>
     </>;
 allStatus.story = {
 name: 'All Status',
-decorators: [(storyFn : any) : ReactElement => <SpaceAroundStory>{storyFn()}</SpaceAroundStory>]
+decorators: [(storyFn : () => ReactNode) : ReactElement => <SpaceAroundStory>{storyFn()}</SpaceAroundStory>]
 };
 
 export const success = (): ReactElement => 
