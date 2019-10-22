@@ -24,3 +24,12 @@ $secondary-button-color: $brand-dark-color !default;
 $disabled-button-color: #e5e5e5 !default;
 
 $disabled-input-color: #f4f4f4 !default;
+$shadow-color-dark: rgba(163, 163, 163, 0.25) !default;
+
+$accent-color : #FFBA35 !default;
+$text-input-focus-color: darken($white, 40%);
+$input-disabled-bg-color: hsl(0,0%,95%); //Following react-select disabled bg color. Do not change coz react-select style is hard to override
+
+//SIZES
+$header-height: 60px !default;
+$sidenav-desktop-width: 270px !default;

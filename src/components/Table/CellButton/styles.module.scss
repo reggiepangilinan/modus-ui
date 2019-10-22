@@ -1,0 +1,33 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/animations.scss";
+
+.buttonDark {
+  @include button-base($brand-color);
+  color: $white;
+  padding: 2px;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  margin: 0px 5px;
+
+  &:disabled {
+    background-color: lighten($brand-color, 20%);
+  }
+}
+
+.buttonLight {
+  @include button-base($white);
+  color: $white;
+  padding: 2px;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  margin: 0px 5px;
+  
+  &:disabled {
+    background-color: darken($white, 20%);
+    color: lighten($white, 40%);
+  }
+}
+

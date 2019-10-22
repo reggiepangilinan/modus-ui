@@ -1,0 +1,40 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+
+@mixin notifIconBase($bgColor) {
+  margin: 10px;
+  height: 35px;
+  min-width: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 35px;
+  color: $white;
+  background-color: $bgColor;
+}
+
+.notificationWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.iconDefault {
+  @include notifIconBase($brand-color);
+}
+
+.iconSuccess {
+  @include notifIconBase($success-color);
+}
+
+.iconWarning {
+  @include notifIconBase($warning-color);
+}
+
+.iconInfo {
+  @include notifIconBase($info-color);
+}
+
+.iconError {
+  @include notifIconBase($error-color);
+}
