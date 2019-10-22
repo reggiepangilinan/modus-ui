@@ -28,5 +28,5 @@ name: 'Fill Container'
 export const  sizeSpecified = (): ReactElement => 
   <Spinner size={150}/>;
 sizeSpecified.story = {
-name: 'Fill Container'
+name: 'Size specified'
 };

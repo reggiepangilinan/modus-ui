@@ -1,7 +1,30 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
 
 <Meta title="Design System|Typography" />
 
-# Typography
+# Typography  
 
-Modus-UI
+## Font Family
+
+**Font:** Nunito Sans
+
+The primary font used by modus-ui is Nunito Sans. It then fallsback to the system fonts as an alternative.
+
+```
+font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif !default;
+```
+
+## Base Font
+
+**Size:** 14px
+
+**Weight:** 400(regular)
+
+<Typeset
+  fontSizes={[
+    Number(14),
+  ]}
+  fontWeight={400}
+/>

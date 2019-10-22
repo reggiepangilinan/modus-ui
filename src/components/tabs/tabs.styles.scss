@@ -6,17 +6,16 @@
 .tabsContainer {
   margin: 10px 0px;
   display: flex;
+  border-bottom: 1px solid $border-color;
 }
 
 .tabItemContainer {
   font-weight: 600;
 
   .tabActive {
-    border-radius: 2px;
     min-width: 150px;
     cursor: pointer;
     border-bottom: 1.5px solid $brand-color;
-    margin-right: 10px;
     line-height: 35px;
     label {
       margin: 10px 0px 0px 10px;
@@ -30,11 +29,8 @@
   }
 
   .tab {
-    border-radius: 2px;
     min-width: 150px;
     cursor: pointer;
-    border-bottom: 1.5px solid $border-color;
-    margin-right: 10px;
     line-height: 35px;
     label {
       margin: 10px 0px 0px 10px;

@@ -21,7 +21,7 @@ To install
 npm i --save modus-ui
 ```
 
-Modus-UI is open-source. Here is the link to repo https://github.com/reggieboyYEAH/modus-ui
+**modus-ui** is open-source. Here is the link to repo https://github.com/reggieboyYEAH/modus-ui
 
 ## How to develop?
 
