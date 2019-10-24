@@ -1,0 +1,88 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/themes.scss';
+
+.checkBoxField {
+  display: flex;
+  flex-direction: column;
+  label {
+    line-height: 17px;
+    margin-bottom: 10px;
+  }
+  .labelCheckBoxWrapper {
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0px;
+    }
+  }
+  .labelError {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: $error-color;
+  }
+
+  .checkbox {
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + p {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    // Box.
+    & + p:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 17px;
+      height: 17px;
+      border-radius: 3px;
+      background: $white;
+      box-shadow: 0 0 0 1px $brand-color;
+    }
+
+    // Box hover
+    &:hover + p:before {
+      background: darken($white, 2%);
+    }
+
+    // Box focus
+    &:focus + p:before {
+      box-shadow: 0 0 0 1px $brand-color;
+    }
+
+    // Box checked
+    &:checked + p:before {
+      background: $brand-color;
+    }
+
+    // Disabled state p.
+    &:disabled + p {
+      cursor: auto;
+    }
+
+    // Disabled box.
+    &:disabled + p:before {
+      box-shadow: none;
+      background: darken($disabled-input-color, 10%);
+    }
+
+    // Checkmark. Could be replaced with an image
+    &:checked + p:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      background: $white;
+      width: 2.5px;
+      height: 2.5px;
+      transform: rotate(45deg);
+      box-shadow: 2px 0 0 $white, 4px 0 0 $white, 4px -2px 0 $white,
+        4px -4px 0 $white, 4px -6px 0 $white, 4px -8px 0 $white;
+    }
+  }
+}
