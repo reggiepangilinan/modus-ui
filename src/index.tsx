@@ -5,3 +5,4 @@ export * from './components/tabs/tabs.component';
 export * from './components/spinner/spinner.component';
 export * from './components/icon/icon.component';
 export * from './components/icon/icontypes.enum';
+export * from './components/inputfield/inputfield.component';

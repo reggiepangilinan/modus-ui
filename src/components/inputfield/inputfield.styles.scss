@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/themes.scss';
+
+.inputField 
+{
+  display: flex;
+  flex-direction: column;
+  label {
+    line-height: 18px;
+    font-size: 12px; //TODO: Proper variable
+    font-weight: 600; //TODO: Proper variable
+    margin-bottom: 5px;
+  }
+  .labelError {
+    color: $error-color;
+  }
+  input {
+    color: $primary-text-color;
+    font-family: $font-family;
+    font-size: $base-font-size;
+    width: 230px;
+    line-height: 20px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    height: 30px;
+    border: 1px solid #999999;
+    &:focus {
+      outline: none;
+      border: 1px solid $brand-color;
+    }
+
+    &:disabled {
+      background-color: $disabled-input-color;
+      color: lighten($primary-text-color, 50%);
+    }
+    &::placeholder {
+      color: #999999;
+    }
+  }
+  margin-bottom: 5px;
+}
