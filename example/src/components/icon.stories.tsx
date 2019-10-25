@@ -4,7 +4,7 @@ import { FlexWrapStory } from '../story-wrappers/flex-wrap-story/flex-wrap-story
 import { SpaceAroundStory } from '../story-wrappers/space-around-story/space-around-story.component';
 
 export default {
-  title: 'Components|Icons',
+  title: 'Components/Icons',
   component: Icon
 }
 

@@ -8,3 +8,4 @@ export * from './components/icon/icontypes.enum';
 export * from './components/inputfield/inputfield.component';
 export * from './components/checkbox/checkbox.component';
 export * from './components/radiobuttongroup/radiobuttongroup.component';
+export * from './components/table/table.component';
