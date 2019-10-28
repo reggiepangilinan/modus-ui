@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import styles from './inputfield.styles.scss';
 
- export type InputFieldProps = {
+export type InputFieldProps = {
   name?: string;
   touched?: boolean;
   label: string;
@@ -18,7 +18,9 @@ import styles from './inputfield.styles.scss';
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const InputField: FunctionComponent<InputFieldProps> = (props: InputFieldProps): ReactElement => {
+export const InputField: FunctionComponent<InputFieldProps> = (
+  props: InputFieldProps
+): ReactElement => {
   const displayError = props.touched && props.error;
   return (
     <div className={styles.inputField}>

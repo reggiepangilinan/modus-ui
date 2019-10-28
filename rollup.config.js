@@ -1,12 +1,12 @@
-import typescript from 'rollup-plugin-typescript2'
-import commonjs from 'rollup-plugin-commonjs'
-import external from 'rollup-plugin-peer-deps-external'
-import scss from 'rollup-plugin-scss'
-import postcss from 'rollup-plugin-postcss'
-import resolve from 'rollup-plugin-node-resolve'
-import url from 'rollup-plugin-url'
-import svgr from '@svgr/rollup'
-import pkg from './package.json'
+import typescript from 'rollup-plugin-typescript2';
+import commonjs from 'rollup-plugin-commonjs';
+import external from 'rollup-plugin-peer-deps-external';
+import scss from 'rollup-plugin-scss';
+import postcss from 'rollup-plugin-postcss';
+import resolve from 'rollup-plugin-node-resolve';
+import url from 'rollup-plugin-url';
+import svgr from '@svgr/rollup';
+import pkg from './package.json';
 
 const pluginsConfig = [
   external(),
@@ -22,7 +22,7 @@ const pluginsConfig = [
     clean: true
   }),
   commonjs()
-]
+];
 const outputConfig = (main, module) => [
   {
     file: main,
@@ -36,7 +36,7 @@ const outputConfig = (main, module) => [
     exports: 'named',
     sourcemap: true
   }
-]
+];
 
 export default [
   {
@@ -50,4 +50,4 @@ export default [
   //   output: outputConfig('dist/components/card/index.js', 'dist/components/card/index.es.js'),
   //   plugins: pluginsConfig
   // }
-]
+];

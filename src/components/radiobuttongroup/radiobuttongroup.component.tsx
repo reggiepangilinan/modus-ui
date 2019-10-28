@@ -23,7 +23,6 @@ export type RadioButtonGroupOption = {
 export const RadioButtonGroup: FunctionComponent<RadioButtonGroupProps> = (
   props: RadioButtonGroupProps
 ): ReactElement => {
-
   const displayError = props.touched && props.error;
 
   if (!props.options) throw Error('options is required');
@@ -40,10 +39,7 @@ export const RadioButtonGroup: FunctionComponent<RadioButtonGroupProps> = (
         <div className={styles.items} style={props.itemsStyle}>
           {props.options.map(
             (option: RadioButtonGroupOption): ReactElement => (
-              <label
-                className={styles.radioButton}
-                key={option.id}
-              >
+              <label className={styles.radioButton} key={option.id}>
                 <input
                   name={option.text}
                   type="radio"

@@ -11,8 +11,9 @@ export type CheckboxProps = {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const Checkbox: FunctionComponent<CheckboxProps> = (props: CheckboxProps): ReactElement => {
-
+export const Checkbox: FunctionComponent<CheckboxProps> = (
+  props: CheckboxProps
+): ReactElement => {
   const displayError = props.touched && props.error;
   return (
     <div className={styles.checkBoxField}>

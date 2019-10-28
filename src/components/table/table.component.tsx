@@ -1,4 +1,9 @@
-import React, { FunctionComponent, ReactElement, ReactNode, PropsWithChildren } from 'react';
+import React, {
+  FunctionComponent,
+  ReactElement,
+  ReactNode,
+  PropsWithChildren
+} from 'react';
 import styles from './table.styles.scss';
 import { Spinner } from '../..';
 
@@ -92,24 +97,24 @@ export const Table: FunctionComponent<TableProps> = (
   return (
     <>
       <div className={styles.container} style={style}>
-          <table className={styles.table}>
-            {props.header}
-            <tbody>{!props.isLoading && props.rows}</tbody>
-          </table>
-          {props.isLoading && (
-            <div className={styles.loaderContainer}>
-              <Spinner />
-            </div>
-          )}
-          {!props.isLoading && !props.rows && (
-            <div className={styles.emptyPlaceholder}>
-              <p>
-                {props.emptyMessage
-                  ? props.emptyMessage
-                  : 'There is nothing here.'}
-              </p>
-            </div>
-          )}
+        <table className={styles.table}>
+          {props.header}
+          <tbody>{!props.isLoading && props.rows}</tbody>
+        </table>
+        {props.isLoading && (
+          <div className={styles.loaderContainer}>
+            <Spinner />
+          </div>
+        )}
+        {!props.isLoading && !props.rows && (
+          <div className={styles.emptyPlaceholder}>
+            <p>
+              {props.emptyMessage
+                ? props.emptyMessage
+                : 'There is nothing here.'}
+            </p>
+          </div>
+        )}
       </div>
     </>
   );

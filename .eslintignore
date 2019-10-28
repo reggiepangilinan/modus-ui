@@ -1,0 +1,5 @@
+example/serviceWorker.ts
+example/**/**/*.test.tsx
+example/node_modules
+src/components/icon/icontypes.enum.ts
+src/*.d.ts

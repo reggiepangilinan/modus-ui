@@ -1,4 +1,4 @@
-import React, {ReactElement, ReactNode, PropsWithChildren} from 'react';
+import React, { ReactElement, ReactNode, PropsWithChildren } from 'react';
 import styles from './styles.scss';
 
 type Props = {
