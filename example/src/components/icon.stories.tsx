@@ -1,10 +1,11 @@
+import { Icon, IconAngle, IconSize, IconTypes } from 'modus-ui';
 import React, {
-  ReactElement,
+  FunctionComponent,
   PropsWithChildren,
-  ReactNode,
-  FunctionComponent
+  ReactElement,
+  ReactNode
 } from 'react';
-import { Icon, IconTypes, IconAngle, IconSize } from 'modus-ui';
+
 import { FlexWrapStory } from '../story-wrappers/flex-wrap-story/flex-wrap-story.component';
 import { SpaceAroundStory } from '../story-wrappers/space-around-story/space-around-story.component';
 

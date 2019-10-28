@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
-import styles from './spinner.styles.scss';
+
 import simplespinner from './simplespinner.svg';
+import styles from './spinner.styles.scss';
 
 export type SpinnerProps = {
   /** The message to be displayed */

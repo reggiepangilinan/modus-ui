@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
 import { storiesOf } from '@storybook/react';
-import { Table, TableHead, TableHeader, TableCell, TableRow } from 'modus-ui';
+import { Table, TableCell, TableHead, TableHeader, TableRow } from 'modus-ui';
+import React, { ReactElement } from 'react';
 
 storiesOf('Components/Table', module)
   .add(

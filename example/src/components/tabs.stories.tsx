@@ -1,5 +1,5 @@
+import { TabItem, Tabs } from 'modus-ui';
 import React, { ReactElement } from 'react';
-import { Tabs, TabItem } from 'modus-ui';
 
 export default {
   title: 'Components|Tabs',

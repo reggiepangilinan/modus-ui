@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
 import { storiesOf } from '@storybook/react';
 import { InputField } from 'modus-ui';
+import React, { ReactElement } from 'react';
 
 storiesOf('Components/InputField', module)
   .add(

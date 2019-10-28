@@ -1,7 +1,8 @@
-import React, { ReactElement } from 'react';
 import { Status, StatusType } from 'modus-ui';
-import { SpaceAroundStory } from '../story-wrappers/space-around-story/space-around-story.component';
+import React, { ReactElement } from 'react';
 import { ReactNode } from 'react';
+
+import { SpaceAroundStory } from '../story-wrappers/space-around-story/space-around-story.component';
 
 export default {
   title: 'Components|Status',

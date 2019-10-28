@@ -1,4 +1,5 @@
-import React, { FunctionComponent, ReactElement, CSSProperties } from 'react';
+import React, { CSSProperties, FunctionComponent, ReactElement } from 'react';
+
 import styles from './radiobuttongroup.styles.scss';
 
 export type RadioButtonGroupProps = {

@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode, PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactElement, ReactNode } from 'react';
 
 export type Props = {
   active?: boolean;

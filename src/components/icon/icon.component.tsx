@@ -1,4 +1,5 @@
-import React, { FunctionComponent, ReactElement, CSSProperties } from 'react';
+import React, { CSSProperties, FunctionComponent, ReactElement } from 'react';
+
 import { IconTypes } from './icontypes.enum';
 
 export enum IconAngle {

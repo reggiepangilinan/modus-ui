@@ -1,11 +1,12 @@
 import React, {
   FunctionComponent,
+  PropsWithChildren,
   ReactElement,
-  ReactNode,
-  PropsWithChildren
+  ReactNode
 } from 'react';
-import styles from './table.styles.scss';
+
 import { Spinner } from '../..';
+import styles from './table.styles.scss';
 
 export type TableHeadProps = {} & PropsWithChildren<ReactNode>;
 /**

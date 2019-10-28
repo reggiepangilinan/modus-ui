@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
 import { storiesOf } from '@storybook/react';
 import { Spinner } from 'modus-ui';
+import React, { ReactElement } from 'react';
 
 export default {
   title: 'Components|Spinner',

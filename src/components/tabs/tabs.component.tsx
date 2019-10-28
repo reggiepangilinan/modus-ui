@@ -1,9 +1,10 @@
 import React, {
   FunctionComponent,
+  PropsWithChildren,
   ReactElement,
-  ReactNode,
-  PropsWithChildren
+  ReactNode
 } from 'react';
+
 import styles from './tabs.styles.scss';
 
 export type TabsProps = {} & PropsWithChildren<ReactNode>;

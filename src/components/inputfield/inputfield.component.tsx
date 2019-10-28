@@ -1,4 +1,5 @@
 import React, { FunctionComponent, ReactElement } from 'react';
+
 import styles from './inputfield.styles.scss';
 
 export type InputFieldProps = {

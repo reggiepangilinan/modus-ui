@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
 import { storiesOf } from '@storybook/react';
 import { RadioButtonGroup, RadioButtonGroupOption } from 'modus-ui';
+import React, { ReactElement } from 'react';
 
 const options: RadioButtonGroupOption[] = [
   { id: 'hot', text: 'This is Hot', value: 'hot' },
