@@ -1,31 +1,41 @@
 {
-    "extends": [
-      "react-app",
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended",
-      "prettier/@typescript-eslint",
-      "plugin:prettier/recommended"
-    ],
-    "plugins": ["react", "@typescript-eslint", "prettier"],
-    "env": {
-      "browser": true,
-      "node": true,
-      "jest": true
-    },
-    "rules": {
-      "eqeqeq": "error",
-      "prettier/prettier": ["error", { "singleQuote": true }],
-      "@typescript-eslint/no-explicit-any": "error",
-      "@typescript-eslint/interface-name-prefix": 0,
-      "@typescript-eslint/prefer-interface": 0,
-      "@typescript-eslint/no-empty-interface": 0
-    },
-    "settings": {
-      "react": {
-        "pragma": "React",
-        "version": "detect"
-      }
-    },
-    "parser": "@typescript-eslint/parser"
-  }
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "eqeqeq": "error",
+    // "comma-dangle": [
+    //   "error",
+    //   {
+    //     "arrays": "always",
+    //     "objects": "always",
+    //     "imports": "always-multiline",
+    //     "exports": "always-multiline",
+    //     "functions": "always"
+    //   }
+    // ],
+    "prettier/prettier": ["error", { "singleQuote": true }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/no-empty-interface": 0
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}

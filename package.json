@@ -55,7 +55,7 @@
     "rollup-plugin-scss": "1.0.2",
     "rollup-plugin-typescript2": "0.24.3",
     "rollup-plugin-url": "3.0.0",
-    "typescript": "2.8.3"
+    "typescript": "^3.6.4"
   },
   "files": [
     "dist"

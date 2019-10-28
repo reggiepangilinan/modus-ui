@@ -5,7 +5,7 @@ export const background = {
   appInverse: '#7A8997',
   positive: '#E1FFD4',
   negative: '#FEDED2',
-  warning: '#FFF5CF',
+  warning: '#FFF5CF'
 };
 
 export const color = {
@@ -33,7 +33,7 @@ export const color = {
   // Status
   positive: '#66BF3C',
   negative: '#FF4400',
-  warning: '#E69D00',
+  warning: '#E69D00'
 };
 
 <Meta title="Design System|Colors" />
@@ -43,43 +43,48 @@ export const color = {
 ## Brand Color
 
 The brand color defines the visual elements used to embody the product identity and communicate ideas.
-In **modus-ui**, brand color consists of a **Primary** and **Secondary** color. 
+In **modus-ui**, brand color consists of a **Primary** and **Secondary** color.
 
 ### Primary
 
-Is the color that represents the brand. Used mainly in elements that are important to capture the users attention. 
+Is the color that represents the brand. Used mainly in elements that are important to capture the users attention.
 It is inviting to purposely guide users to execute an action.
 
 <ColorPalette>
-    <ColorItem title="East Bay" colors={['#31465F']} />
+  <ColorItem title="East Bay" colors={['#31465F']} />
 </ColorPalette>
 
 **modus-ui** provides different shades of **Primary** color to give range and flexibility to the UI design that can be used in different context such as highlight or subtle contrasts of elements.
-Each shade is 2x lighter and darker. The middle one is the base primary color. 
+Each shade is 2x lighter and darker. The middle one is the base primary color.
 
 <ColorPalette>
-    <ColorItem title="Primary Color Shades" colors={['#223040','#293A4E','#31465F','#56677C','#748293']} />
+  <ColorItem
+    title="Primary Color Shades"
+    colors={['#223040', '#293A4E', '#31465F', '#56677C', '#748293']}
+  />
 </ColorPalette>
 
 ```
 TODO: Add CSS or SCSS Variables here.
 ```
 
-
 ### Secondary
 
 Is the color that is used to provide contrasts or to accentuate the **Primary** color.
-The **Secondary** color provides that "fun" or "twist" the compliments the background or the primary color. 
+The **Secondary** color provides that "fun" or "twist" the compliments the background or the primary color.
 Mainly used in borders and elements that needs subtle emphasis or attention.
 
 <ColorPalette>
-    <ColorItem title="Orange Peel" colors={['#FF9900']} />
+  <ColorItem title="Orange Peel" colors={['#FF9900']} />
 </ColorPalette>
 
 Secondary color also comes in different shades.
 
 <ColorPalette>
-    <ColorItem title="Secondary Color Shades" colors={['#AC6800','#D17E00','#FF9900','#FFAB2E','#FFBA54']} />
+  <ColorItem
+    title="Secondary Color Shades"
+    colors={['#AC6800', '#D17E00', '#FF9900', '#FFAB2E', '#FFBA54']}
+  />
 </ColorPalette>
 
 ```
@@ -88,19 +93,22 @@ TODO: Add CSS or SCSS Variables here.
 
 ## Functional Color
 
-Is a color that represents a clear message and status, such as success, error, information, warning etc. 
-The Functional colors selection that **modus-ui** has is very common and it complies with the user's basic understanding of color and it's meaning. 
+Is a color that represents a clear message and status, such as success, error, information, warning etc.
+The Functional colors selection that **modus-ui** has is very common and it complies with the user's basic understanding of color and it's meaning.
 
 ### Success
 
 Used to denote a status of success, done or complete.
 
 <ColorPalette>
-    <ColorItem title="Emerald" colors={['#42c379']} />
+  <ColorItem title="Emerald" colors={['#42c379']} />
 </ColorPalette>
 
 <ColorPalette>
-    <ColorItem title="Success Color Shades" colors={['#2A7D4E','#42c379','#75D39D']} />
+  <ColorItem
+    title="Success Color Shades"
+    colors={['#2A7D4E', '#42c379', '#75D39D']}
+  />
 </ColorPalette>
 
 ```
@@ -112,28 +120,33 @@ TODO: Add CSS or SCSS Variables here.
 Used to denote a status of information.
 
 <ColorPalette>
-    <ColorItem title="Azure Radiance" colors={['#007af8']} />
+  <ColorItem title="Azure Radiance" colors={['#007af8']} />
 </ColorPalette>
 
 <ColorPalette>
-    <ColorItem title="Information Color Shades" colors={['#0059B5','#007af8','#73B6FB']} />
+  <ColorItem
+    title="Information Color Shades"
+    colors={['#0059B5', '#007af8', '#73B6FB']}
+  />
 </ColorPalette>
 
 ```
 TODO: Add CSS or SCSS Variables here.
 ```
 
-
 ### Warning
 
 Used to denote a status of warning.
 
 <ColorPalette>
-    <ColorItem title="Coral" colors={['#ff9347']} />
+  <ColorItem title="Coral" colors={['#ff9347']} />
 </ColorPalette>
 
 <ColorPalette>
-    <ColorItem title="Warning Color Shades" colors={['#A35E2E','#ff9347','#FFBA89']} />
+  <ColorItem
+    title="Warning Color Shades"
+    colors={['#A35E2E', '#ff9347', '#FFBA89']}
+  />
 </ColorPalette>
 
 ```
@@ -145,17 +158,19 @@ TODO: Add CSS or SCSS Variables here.
 Used to denote a status of error or danger.
 
 <ColorPalette>
-    <ColorItem title="Radical Red" colors={['#ff4260']} />
+  <ColorItem title="Radical Red" colors={['#ff4260']} />
 </ColorPalette>
 
 <ColorPalette>
-    <ColorItem title="Error / Danger Color Shades" colors={['#A32A3E','#ff4260','#FF97A8']} />
+  <ColorItem
+    title="Error / Danger Color Shades"
+    colors={['#A32A3E', '#ff4260', '#FF97A8']}
+  />
 </ColorPalette>
 
 ```
 TODO: Add CSS or SCSS Variables here.
 ```
-
 
 ## Neutral Color
 
@@ -174,7 +189,7 @@ such as background, borders, dividers. **modus-ui** recommends to use contrasts 
       color.mediumlight,
       color.light,
       color.lighter,
-      color.lightest,
+      color.lightest
     ]}
   />
 </ColorPalette>

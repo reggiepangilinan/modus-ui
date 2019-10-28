@@ -12,13 +12,21 @@ storiesOf('Components/InputField', module)
   .add(
     'Password',
     (): ReactElement => (
-      <InputField label="Enter Password" type={'password'} placeholder="Placeholder" />
+      <InputField
+        label="Enter Password"
+        type={'password'}
+        placeholder="Placeholder"
+      />
     )
   )
   .add(
     'Number',
     (): ReactElement => (
-      <InputField label="This is number field" type={'number'} placeholder="Placeholder" />
+      <InputField
+        label="This is number field"
+        type={'number'}
+        placeholder="Placeholder"
+      />
     )
   )
   .add(

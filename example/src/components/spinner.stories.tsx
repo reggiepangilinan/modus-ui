@@ -5,28 +5,26 @@ import { Spinner } from 'modus-ui';
 export default {
   title: 'Components|Spinner',
   component: Spinner
-}
+};
 
-export const  defaultSpinner = (): ReactElement => 
-  <Spinner/>;
+export const defaultSpinner = (): ReactElement => <Spinner />;
 defaultSpinner.story = {
-name: 'Default'
+  name: 'Default'
 };
 
-export const  withMessage = (): ReactElement => 
-<Spinner message="Hello from Spinner" />;
+export const withMessage = (): ReactElement => (
+  <Spinner message="Hello from Spinner" />
+);
 withMessage.story = {
-name: 'With Message'
+  name: 'With Message'
 };
 
-export const  fillContainer = (): ReactElement => 
-  <Spinner fillcontainer/>;
+export const fillContainer = (): ReactElement => <Spinner fillcontainer />;
 fillContainer.story = {
-name: 'Fill Container'
+  name: 'Fill Container'
 };
 
-export const  sizeSpecified = (): ReactElement => 
-  <Spinner size={150}/>;
+export const sizeSpecified = (): ReactElement => <Spinner size={150} />;
 sizeSpecified.story = {
-name: 'Size specified'
+  name: 'Size specified'
 };

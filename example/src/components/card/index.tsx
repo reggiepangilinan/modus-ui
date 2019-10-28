@@ -1,4 +1,4 @@
-import React, {ReactElement, ReactNode, PropsWithChildren} from 'react';
+import React, { ReactElement, ReactNode, PropsWithChildren } from 'react';
 
 export type Props = {
   active?: boolean;
@@ -7,11 +7,5 @@ export type Props = {
 } & PropsWithChildren<ReactNode>;
 
 export const Card = (props: Props): ReactElement => {
-
-  return (
-    <div onClick={props.onClick}
-    >
-      {props.children}
-    </div>
-  );
+  return <div onClick={props.onClick}>{props.children}</div>;
 };
