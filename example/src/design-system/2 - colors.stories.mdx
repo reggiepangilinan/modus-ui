@@ -1,44 +1,23 @@
-import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
-
-export const background = {
-  app: '#F6F9FC',
-  appInverse: '#7A8997',
-  positive: '#E1FFD4',
-  negative: '#FEDED2',
-  warning: '#FFF5CF'
-};
-
-export const color = {
-  // Palette
-  primary: '#FF4785', // coral
-  secondary: '#1EA7FD', // ocean
-  tertiary: '#DDDDDD',
-  orange: '#FC521F',
-  gold: '#FFAE00',
-  green: '#66BF3C',
-  seafoam: '#37D5D3',
-  purple: '#6F2CAC',
-  ultraviolet: '#2A0481',
-  // Monochrome
-  lightest: '#FFFFFF',
-  lighter: '#F8F8F8',
-  light: '#F3F3F3',
-  mediumlight: '#EEEEEE',
-  medium: '#DDDDDD',
-  mediumdark: '#999999',
-  dark: '#666666',
-  darker: '#444444',
-  darkest: '#333333',
-  border: 'rgba(0,0,0,.1)',
-  // Status
-  positive: '#66BF3C',
-  negative: '#FF4400',
-  warning: '#E69D00'
-};
+import { ColorItem, ColorPalette, Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Design System|Colors" />
 
 # Colors
+
+### Convention for variables
+
+For different shades of colors `modus-ui` uses suffix such as `-d1` `-d2` an so on to denote a darker shade of color.
+And for lighter colors it is `-l1` `-l2`
+
+Color variables that does not have this suffix are the baseline colors.
+
+Example
+
+```
+$brand-primary-color-d1    // A shade darker
+$brand-primary-color       // This is the base
+$brand-primary-color-l1    // A shade lighter
+```
 
 ## Brand Color
 
@@ -65,7 +44,13 @@ Each shade is 2x lighter and darker. The middle one is the base primary color.
 </ColorPalette>
 
 ```
-TODO: Add CSS or SCSS Variables here.
+//SCSS Variables
+
+$brand-primary-color-d2: #223040 !default;
+$brand-primary-color-d1: #293a4e !default;
+$brand-primary-color: #3b5574 !default;
+$brand-primary-color-l1: #56677c !default;
+$brand-primary-color-l2: #748293 !default;
 ```
 
 ### Secondary
@@ -181,19 +166,29 @@ such as background, borders, dividers. **modus-ui** recommends to use contrasts 
   <ColorItem
     title="Monochrome"
     colors={[
-      color.darkest,
-      color.darker,
-      color.dark,
-      color.mediumdark,
-      color.medium,
-      color.mediumlight,
-      color.light,
-      color.lighter,
-      color.lightest
+      '#333333',
+      '#444444',
+      '#666666',
+      '#999999',
+      '#dddddd',
+      '#eeeeee',
+      '#f3f3f3',
+      '#f8f8f8',
+      '#ffffff'
     ]}
   />
 </ColorPalette>
 
 ```
-TODO: Add CSS or SCSS Variables here.
+//SCSS Variables
+
+$neutral-color-d4: #333333 !default;
+$neutral-color-d3: #444444 !default;
+$neutral-color-d2: #666666 !default;
+$neutral-color-d1: #999999 !default;
+$neutral-color: #dddddd !default;
+$neutral-color-l1: #eeeeee !default;
+$neutral-color-l2: #f3f3f3 !default;
+$neutral-color-l3: #f8f8f8 !default;
+$neutral-color-l4: #ffffff !default;
 ```

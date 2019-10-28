@@ -2,7 +2,7 @@ import { TabItem, Tabs } from 'modus-ui';
 import React, { ReactElement } from 'react';
 
 export default {
-  title: 'Components|Tabs',
+  title: 'Components/Tabs',
   component: Tabs
 };
 

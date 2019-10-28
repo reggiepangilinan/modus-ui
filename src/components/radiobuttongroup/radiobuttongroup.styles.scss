@@ -3,8 +3,6 @@
 @import '../../styles/animations.scss';
 @import '../../styles/themes.scss';
 
-
-
 .radioButtonGroup {
   display: flex;
   div[role='group'] {
@@ -31,7 +29,6 @@
   }
 }
 
-
 .radioButton {
   user-select: none;
   display: flex;
@@ -52,7 +49,7 @@
     }
     &:checked ~ .checkmark {
       background-color: $white;
-      border: 1.5px solid $brand-color;
+      border: 1.5px solid $brand-primary-color;
     }
 
     &:disabled ~ .checkmark {
@@ -95,7 +92,7 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: $brand-color;
+      background: $brand-primary-color;
       text-align: center;
       align-items: center;
     }
@@ -103,7 +100,7 @@
 
   &:hover input ~ .checkmark {
     background-color: $white;
-    border: 1.5px solid $brand-color;
+    border: 1.5px solid $brand-primary-color;
   }
 
   &:hover input:disabled ~ .checkmark {

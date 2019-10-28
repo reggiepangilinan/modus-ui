@@ -16,6 +16,7 @@ storiesOf('Components/InputField', module)
         label="Enter Password"
         type={'password'}
         placeholder="Placeholder"
+        value="secrets"
       />
     )
   )
@@ -26,6 +27,7 @@ storiesOf('Components/InputField', module)
         label="This is number field"
         type={'number'}
         placeholder="Placeholder"
+        value={100.01}
       />
     )
   )

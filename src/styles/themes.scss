@@ -1,25 +1,61 @@
-// COLORS
+// =================================================
+// NEW COLORS
+
+$brand-primary-color-d2: #223040 !default;
+$brand-primary-color-d1: #293a4e !default;
+$brand-primary-color: #3b5574 !default;
+$brand-primary-color-l1: #56677c !default;
+$brand-primary-color-l2: #748293 !default;
+
+$brand-secondary-color-d2: #ac6800 !default;
+$brand-secondary-color-d1: #d17e00 !default;
+$brand-secondary-color: #ff9900 !default;
+$brand-secondary-color-l1: #ffab2e !default;
+$brand-secondary-color-l2: #ffba54 !default;
+
+$success-color-d1: #2a7d4e !default;
+$success-color: #42c379 !default;
+$success-color-l2: #75d39d !default;
+
+$info-color-d1: #0059b5 !default;
+$info-color: #007af8 !default;
+$info-color-l2: #73b6fb !default;
+
+$warning-color-d1: #a35e2e !default;
+$warning-color: #ff9347 !default;
+$warning-color-l2: #ffba89 !default;
+
+$error-color-d1: #a32a3e !default;
+$error-color: #ff4260 !default;
+$error-color-l2: #ff97a8 !default;
+
+$neutral-color-d4: #333333 !default;
+$neutral-color-d3: #444444 !default;
+$neutral-color-d2: #666666 !default;
+$neutral-color-d1: #999999 !default;
+$neutral-color: #dddddd !default;
+$neutral-color-l1: #eeeeee !default;
+$neutral-color-l2: #f3f3f3 !default;
+$neutral-color-l3: #f8f8f8 !default;
+$neutral-color-l4: #ffffff !default;
+
+// OLD COLORS
 $black: #000000 !default;
 $white: #fff !default;
-$brand-color: #3B5574 !default;
-$brand-dark-color: darken($brand-color, 40%) !default;
+
+$brand-dark-color: darken($brand-primary-color, 40%) !default;
 $shadow-color: #e5e5e5;
 $border-color: #e5e5e5;
 
-$success-color: #42c379 !default;
-$info-color: #007af8 !default;
-$warning-color: #ff9347 !default;
-$error-color: #ff4260 !default;
-
 $primary-text-color: #2d2c2c !default;
 $secondary-text-color: #707070 !default;
-$highlight-text-color: $brand-color !default;
+$highlight-text-color: $brand-primary-color !default;
 
 $primary-bg-color: $white !default;
 $secondary-bg-color: #f2f2f2 !default;
 $highlight-bg-color: #eaf1f9 !default;
 
-$primary-button-color: $brand-color !default;
+$primary-button-color: $brand-primary-color !default;
 $secondary-button-color: $brand-dark-color !default;
 $disabled-button-color: #e5e5e5 !default;
 

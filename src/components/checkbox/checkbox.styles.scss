@@ -42,7 +42,7 @@
       height: 17px;
       border-radius: 3px;
       background: $white;
-      box-shadow: 0 0 0 1px $brand-color;
+      box-shadow: 0 0 0 1px $brand-primary-color;
     }
 
     // Box hover
@@ -52,12 +52,12 @@
 
     // Box focus
     &:focus + p:before {
-      box-shadow: 0 0 0 1px $brand-color;
+      box-shadow: 0 0 0 1px $brand-primary-color;
     }
 
     // Box checked
     &:checked + p:before {
-      background: $brand-color;
+      background: $brand-primary-color;
     }
 
     // Disabled state p.
