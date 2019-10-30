@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/themes.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  height: 20px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border: 1px solid $neutral-color;
+  border-radius: 22px;
+
+  span {
+    color: $neutral-color-d4;
+    font-size: 12px;
+    font-weight: $font-weight-semibold;
+    margin-right: 5px;
+  }
+
+  svg {
+    fill: $neutral-color-d1;
+    cursor: pointer;
+  }
+}
