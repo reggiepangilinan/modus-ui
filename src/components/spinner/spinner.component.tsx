@@ -1,21 +1,25 @@
+import PropTypes, { InferProps } from 'prop-types';
 import React, { ReactElement } from 'react';
 
 import simplespinner from './simplespinner.svg';
 import styles from './spinner.styles.scss';
 
-export type SpinnerProps = {
+const props = {
   /** The message to be displayed */
-  message?: string;
+  message: PropTypes.string,
   /** Size of the loader in `px`
    * @default 50px
    */
-  size?: number;
+  size: PropTypes.number,
   /** Fill the size of the container.
    * @default false
    */
-  fillcontainer?: boolean;
+  fillcontainer: PropTypes.bool
 };
 
+export type SpinnerProps = InferProps<typeof props>;
+
+/**Yes */
 export const Spinner = (props: SpinnerProps): ReactElement => {
   const imageStyle = props.size
     ? { height: `${props.size}px`, width: `${props.size}px` }
@@ -29,3 +33,5 @@ export const Spinner = (props: SpinnerProps): ReactElement => {
     </div>
   );
 };
+
+Spinner.propTypes = props;

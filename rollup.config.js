@@ -1,11 +1,12 @@
-import typescript from 'rollup-plugin-typescript2';
-import commonjs from 'rollup-plugin-commonjs';
-import external from 'rollup-plugin-peer-deps-external';
-import scss from 'rollup-plugin-scss';
-import postcss from 'rollup-plugin-postcss';
-import resolve from 'rollup-plugin-node-resolve';
-import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
+import commonjs from 'rollup-plugin-commonjs';
+import resolve from 'rollup-plugin-node-resolve';
+import external from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
+import scss from 'rollup-plugin-scss';
+import typescript from 'rollup-plugin-typescript2';
+import url from 'rollup-plugin-url';
+
 import pkg from './package.json';
 
 const pluginsConfig = [
@@ -44,10 +45,4 @@ export default [
     output: outputConfig(pkg.main, pkg.module),
     plugins: pluginsConfig
   }
-  // ,
-  // {
-  //   input: 'src/components/card/index.tsx',
-  //   output: outputConfig('dist/components/card/index.js', 'dist/components/card/index.es.js'),
-  //   plugins: pluginsConfig
-  // }
 ];
