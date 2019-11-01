@@ -1,9 +1,8 @@
-import { storiesOf } from '@storybook/react';
 import { Spinner } from 'modus-ui';
 import React, { ReactElement } from 'react';
 
 export default {
-  title: 'Components|Spinner',
+  title: 'Components/Spinner',
   component: Spinner
 };
 
