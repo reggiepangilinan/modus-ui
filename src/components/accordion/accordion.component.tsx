@@ -5,6 +5,7 @@ import styles from './accordion.styles.scss';
 
 export type AccordionProps = {
   children: React.ReactNode;
+  expandAll: boolean;
 };
 
 export const Accordion: FunctionComponent<AccordionProps> = (
@@ -16,13 +17,13 @@ export const Accordion: FunctionComponent<AccordionProps> = (
 export type AccordionItemProps = {
   text?: string;
   children: React.ReactNode;
-  expandAll?: boolean;
+  expandItem: boolean;
 };
 
 export const AccordionItem: FunctionComponent<AccordionItemProps> = (
   props: AccordionItemProps
 ): ReactElement => {
-  const [expandItem, setExpandItem] = useState(false);
+  const [expandItem, setExpandItem] = useState(props.expandItem);
 
   return (
     <div>
