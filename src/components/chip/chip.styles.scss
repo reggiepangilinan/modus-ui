@@ -1,8 +1,8 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
-@import "../../styles/themes.scss";
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/themes.scss';
 
-.container {
+.chip {
   display: flex;
   align-items: center;
   background-color: $white;
@@ -17,10 +17,59 @@
     font-size: 12px;
     font-weight: $font-weight-semibold;
     margin-right: 5px;
+    margin-bottom: 2px;
   }
 
-  svg {
+  .button {
+    height: 16px;
     fill: $neutral-color-d1;
     cursor: pointer;
+
+    :hover {
+      fill: $neutral-color-d2;
+    }
+  }
+}
+
+.types {
+  border: 0;
+  height: 22px;
+
+  span {
+    color: $neutral-color-l4;
+  }
+
+  .button {
+    fill: $neutral-color-l4;
+
+    :hover {
+      fill: $neutral-color-l1;
+    }
+  }
+}
+
+.success {
+  background-color: $success-color;
+}
+
+.error {
+  background-color: $error-color;
+}
+
+.info {
+  background-color: $info-color;
+}
+
+.warning {
+  background-color: $warning-color;
+}
+
+.disabled {
+  border: 0;
+  height: 22px;
+  background-color: $neutral-color-l1 !important;
+
+  span {
+    color: $neutral-color-d1 !important;
   }
 }
