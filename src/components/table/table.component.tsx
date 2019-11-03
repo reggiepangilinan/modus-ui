@@ -5,7 +5,7 @@ import React, {
   ReactNode
 } from 'react';
 
-import { Spinner } from '../..';
+import { Spinner } from '../spinner/spinner.component';
 import styles from './table.styles.scss';
 
 export type TableHeadProps = {} & PropsWithChildren<ReactNode>;
