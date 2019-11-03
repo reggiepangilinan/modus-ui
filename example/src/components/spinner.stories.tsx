@@ -3,7 +3,10 @@ import React, { ReactElement } from 'react';
 
 export default {
   title: 'Components/Spinner',
-  component: Spinner
+  component: Spinner,
+  parameters: {
+    componentSubtitle: 'This is a spinner'
+  }
 };
 
 export const defaultSpinner = (): ReactElement => <Spinner />;
@@ -12,7 +15,9 @@ defaultSpinner.story = {
 };
 
 export const withMessage = (): ReactElement => (
-  <Spinner message="Hello from Spinner" />
+  <>
+    <Spinner message="Hello from Spinner" />
+  </>
 );
 withMessage.story = {
   name: 'With Message'
