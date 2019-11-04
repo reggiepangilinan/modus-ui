@@ -1,5 +1,4 @@
 @import '../../styles/variables.scss';
-@import '../../styles/mixins.scss';
 @import '../../styles/animations.scss';
 @import '../../styles/themes.scss';
 
@@ -30,9 +29,6 @@
     font-size: 0.8em;
     background-color: darken($secondary-bg-color, 1%);
     color: lighten($primary-text-color, 40%);
-    @include phone {
-      min-width: 300px;
-    }
     height: 33px;
     padding: 5px;
     position: sticky;
@@ -69,7 +65,7 @@
       background-color: $primary-bg-color;
       box-shadow: 0 0 8px 0 $shadow-color;
     }
-    
+
     td:first-child {
       padding-left: 10px;
     }
