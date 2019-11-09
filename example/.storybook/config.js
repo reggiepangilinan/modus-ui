@@ -41,9 +41,6 @@ const planitTheme = create({
 // addDecorator(withKnobs);
 // addDecorator(withInfo({ inline: true }));
 addParameters({
-  docs: {
-    inlineStories: true
-  },
   options: {
     theme: planitTheme,
     panelPosition: 'right'
