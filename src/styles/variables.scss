@@ -8,12 +8,16 @@ $font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace !default;
 $base-font-size: 14px;
 
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
 // LAYOUT SIZES
 $border-radius: 3px;
 $header-height: 64px !default;
 $sidenav-desktop-width: 480px !default;
 
-$height-30px: 30px;
+$height-32px: 32px;
 
 $transition-fast: 300ms !default;
 $transition-slow: 500ms !default;
