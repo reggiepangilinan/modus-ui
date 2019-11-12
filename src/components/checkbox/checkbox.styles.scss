@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   label {
-    line-height: 17px;
-    margin-bottom: 10px;
+    line-height: $line-height-sm;
+    margin-bottom: $space-sm;
   }
   .labelCheckBoxWrapper {
     display: flex;
@@ -16,8 +16,8 @@
     }
   }
   .labelError {
-    font-size: 0.9em;
-    font-weight: 500;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
     color: $error-color;
   }
 
@@ -34,24 +34,24 @@
     // Box.
     & + p:before {
       content: '';
-      margin-right: 10px;
+      margin-right: $space-md;
       display: inline-block;
       vertical-align: text-top;
-      width: 17px;
-      height: 17px;
-      border-radius: 3px;
-      background: $white;
-      box-shadow: 0 0 0 1px $brand-primary-color;
+      width: $size-20px;
+      height: $size-20px;
+      border-radius: $border-radius;
+      background: $neutral-color-l4;
+      box-shadow: 0 0 0 $border-width-sm $brand-primary-color;
     }
 
     // Box hover
     &:hover + p:before {
-      background: darken($white, 2%);
+      background: $brand-secondary-color-l2;
     }
 
     // Box focus
     &:focus + p:before {
-      box-shadow: 0 0 0 1px $brand-primary-color;
+      box-shadow: 0 0 0 $border-width-sm $brand-primary-color;
     }
 
     // Box checked
@@ -66,22 +66,23 @@
 
     // Disabled box.
     &:disabled + p:before {
-      box-shadow: none;
-      background: darken($disabled-input-color, 10%);
+      box-shadow: 0 0 0 $border-width-sm $neutral-color;
+      background: $neutral-color;
     }
 
     // Checkmark. Could be replaced with an image
     &:checked + p:after {
       content: '';
       position: absolute;
-      left: 3px;
-      top: 7px;
-      background: $white;
+      left: 4.5px;
+      top: 8.5px;
+      background: $neutral-color-l4;
       width: 2.5px;
       height: 2.5px;
       transform: rotate(45deg);
-      box-shadow: 2px 0 0 $white, 4px 0 0 $white, 4px -2px 0 $white,
-        4px -4px 0 $white, 4px -6px 0 $white, 4px -8px 0 $white;
+      box-shadow: 2px 0 0 $neutral-color-l4, 4px 0 0 $neutral-color-l4,
+        4px -2px 0 $neutral-color-l4, 4px -4px 0 $neutral-color-l4,
+        4px -6px 0 $neutral-color-l4, 4px -8px 0 $neutral-color-l4;
     }
   }
 }
