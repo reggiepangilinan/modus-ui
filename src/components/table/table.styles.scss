@@ -2,19 +2,17 @@
 @import '../../styles/animations.scss';
 @import '../../styles/themes.scss';
 
-.container {
+.tableContainer {
   overflow: auto;
-  padding: 0px 10px 0px 10px;
+  padding: 0px $space-sm 0px $space-sm;
 }
 
 .table {
-  background-color: lighten($secondary-bg-color, 1%);
-  padding: 0px 20px 0px 10px;
+  background-color: $neutral-color-l4;
   display: table;
   width: 100%;
   border-collapse: collapse;
   box-sizing: border-box;
-  padding: 10px;
 
   th:before,
   th:after {
@@ -25,12 +23,12 @@
   }
 
   thead th {
-    font-weight: 700;
-    font-size: 0.8em;
-    background-color: darken($secondary-bg-color, 1%);
-    color: lighten($primary-text-color, 40%);
+    background-color: $neutral-color-l4;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xs;
+    color: $brand-primary-color;
     height: 33px;
-    padding: 5px;
+    padding: $space-xs $space-sm;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -40,37 +38,33 @@
 
     &::after {
       bottom: 0px;
-      border-bottom-color: darken($border-color, 10%);
-      border-bottom-width: 2px;
-      border-bottom-style: none;
-      box-shadow: 0px 4px 10px $shadow-color;
+      border-bottom-color: $neutral-color-d1;
+      border-bottom-width: $border-width-sm;
+      border-bottom-style: solid;
     }
   }
 
   tbody td {
-    height: 32px;
     min-height: 0px;
-    padding: 10px 5px 5px 5px;
+    padding: $space-sm $space-xs $space-xs $space-xs;
     word-wrap: break-word;
   }
 
   tbody tr {
     @include fadein;
-    border-bottom-color: $shadow-color;
-    border-bottom-width: 0.5px;
+    border-bottom-color: $neutral-color;
+    border-bottom-width: $border-width-xs;
     border-bottom-style: solid;
-    transition: all 0.4s ease-in-out;
+    transition: all $transition-slow ease-in-out;
     &:hover {
-      padding: 0px 10px;
-      background-color: $primary-bg-color;
-      box-shadow: 0 0 8px 0 $shadow-color;
+      background-color: $neutral-color-l3;
     }
 
     td:first-child {
-      padding-left: 10px;
+      padding-left: $space-sm;
     }
     td:last-child {
-      padding-right: 10px;
+      padding-right: $space-sm;
     }
   }
 
@@ -87,7 +81,12 @@
   justify-content: center;
   text-align: center;
   p {
-    font-weight: 600;
-    margin-top: 30px;
+    font-weight: $font-weight-semibold;
+    color: $neutral-color-d2;
+    margin-top: $space-md;
   }
+}
+
+.spinnerContainer {
+  margin-top: $space-md;
 }

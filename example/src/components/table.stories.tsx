@@ -1,6 +1,34 @@
 import { storiesOf } from '@storybook/react';
-import { Table, TableCell, TableHead, TableHeader, TableRow } from 'modus-ui';
+import {
+  IconAngle,
+  IconButton,
+  IconSize,
+  IconTypes,
+  Table,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from 'modus-ui';
 import React, { ReactElement } from 'react';
+
+const rows = new Array<ReactElement>();
+for (let index = 1; index < 200; index++) {
+  rows.push(
+    <TableRow key={index.toString()}>
+      <TableCell>John Doe {index}</TableCell>
+      <TableCell>10</TableCell>
+      <TableCell>The quick brown fox jumps over the lazy dog {index}</TableCell>
+      <TableCell align="right">
+        <IconButton
+          type={IconTypes.ellipsis}
+          transform={IconAngle.NegativeNinety}
+          size={IconSize.XSmall}
+        />
+      </TableCell>
+    </TableRow>
+  );
+}
 
 storiesOf('Components/Table', module)
   .add(
@@ -12,49 +40,78 @@ storiesOf('Components/Table', module)
           <TableHead>
             <TableHeader maxWidth="120px" label="Name" />
             <TableHeader maxWidth="100px" label="Age" />
-            <TableHeader label="Favorite Subject" />
-            <TableHeader label="Address" />
-            <TableHeader maxWidth="200px" label="Description" />
-            <TableHeader maxWidth="100px" align="center" label="Actions" />
+            <TableHeader label="Description" />
+            <TableHeader maxWidth="100px" label="" />
           </TableHead>
         }
         rows={[
           <TableRow key={'1'}>
             <TableCell>John</TableCell>
-            <TableCell>10</TableCell>
-            <TableCell>Some description to fill up the space</TableCell>
-            <TableCell>
-              This is a super duper long description, because lorem ipsum is
-              booooring
+            <TableCell>40</TableCell>
+            <TableCell>Well, Shake it up baby now!</TableCell>
+            <TableCell align="right">
+              <IconButton
+                type={IconTypes.ellipsis}
+                transform={IconAngle.NegativeNinety}
+                size={IconSize.XSmall}
+              />
             </TableCell>
-            <TableCell>Well shake it up baby now!</TableCell>
-            <TableCell></TableCell>
           </TableRow>,
           <TableRow key={'2'}>
             <TableCell>Paul</TableCell>
-            <TableCell>10</TableCell>
-            <TableCell>Math</TableCell>
-            <TableCell></TableCell>
+            <TableCell>20</TableCell>
             <TableCell>Shake it up baby!</TableCell>
-            <TableCell></TableCell>
+            <TableCell align="right">
+              <IconButton
+                type={IconTypes.ellipsis}
+                transform={IconAngle.NegativeNinety}
+                size={IconSize.XSmall}
+              />
+            </TableCell>
           </TableRow>,
           <TableRow key={'3'}>
             <TableCell>George</TableCell>
-            <TableCell>10</TableCell>
-            <TableCell>Science</TableCell>
-            <TableCell></TableCell>
+            <TableCell>32</TableCell>
             <TableCell>TWIST AND SHOUT!</TableCell>
-            <TableCell></TableCell>
+            <TableCell align="right">
+              <IconButton
+                type={IconTypes.ellipsis}
+                transform={IconAngle.NegativeNinety}
+                size={IconSize.XSmall}
+              />
+            </TableCell>
           </TableRow>,
           <TableRow key={'4'}>
             <TableCell>Ringo</TableCell>
-            <TableCell>10</TableCell>
-            <TableCell>Physical Education</TableCell>
-            <TableCell></TableCell>
+            <TableCell>43</TableCell>
             <TableCell>TWIST AND SHOUT!</TableCell>
-            <TableCell></TableCell>
+            <TableCell align="right">
+              <IconButton
+                type={IconTypes.ellipsis}
+                transform={IconAngle.NegativeNinety}
+                size={IconSize.XSmall}
+              />
+            </TableCell>
           </TableRow>
         ]}
+      />
+    )
+  )
+  .add(
+    'Overflow',
+    (): ReactElement => (
+      <Table
+        isLoading={false}
+        height={'100vh'}
+        header={
+          <TableHead>
+            <TableHeader maxWidth="120px" label="Name" />
+            <TableHeader maxWidth="100px" label="Age" />
+            <TableHeader label="Description" />
+            <TableHeader maxWidth="100px" label="" />
+          </TableHead>
+        }
+        rows={rows}
       />
     )
   )
@@ -62,16 +119,12 @@ storiesOf('Components/Table', module)
     'Empty',
     (): ReactElement => (
       <Table
-        height={'100vh'}
         isLoading={false}
         header={
           <TableHead>
             <TableHeader maxWidth="120px" label="Name" />
             <TableHeader maxWidth="100px" label="Age" />
-            <TableHeader label="Favorite Subject" />
-            <TableHeader label="Address" />
-            <TableHeader maxWidth="200px" label="Description" />
-            <TableHeader maxWidth="100px" align="center" label="Actions" />
+            <TableHeader label="Description" />
           </TableHead>
         }
       />
@@ -81,16 +134,12 @@ storiesOf('Components/Table', module)
     'Loading',
     (): ReactElement => (
       <Table
-        height={'100vh'}
         isLoading={true}
         header={
           <TableHead>
             <TableHeader maxWidth="120px" label="Name" />
             <TableHeader maxWidth="100px" label="Age" />
-            <TableHeader label="Favorite Subject" />
-            <TableHeader label="Address" />
-            <TableHeader maxWidth="200px" label="Description" />
-            <TableHeader maxWidth="100px" align="center" label="Actions" />
+            <TableHeader label="Description" />
           </TableHead>
         }
       />

@@ -97,13 +97,13 @@ export const Table: FunctionComponent<TableProps> = (
   const style = props.height ? { height: props.height } : {};
   return (
     <>
-      <div className={styles.container} style={style}>
+      <div className={styles.tableContainer} style={style}>
         <table className={styles.table}>
           {props.header}
           <tbody>{!props.isLoading && props.rows}</tbody>
         </table>
         {props.isLoading && (
-          <div className={styles.loaderContainer}>
+          <div className={styles.spinnerContainer}>
             <Spinner />
           </div>
         )}
