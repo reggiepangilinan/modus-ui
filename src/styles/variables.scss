@@ -12,12 +12,18 @@ $font-weight-normal: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-// LAYOUT SIZES
 $border-radius: 3px;
 $header-height: 64px !default;
 $sidenav-desktop-width: 480px !default;
 
 $height-32px: 32px;
-
 $transition-fast: 300ms !default;
 $transition-slow: 500ms !default;
+
+//SPACE SIZES
+$space-xs: 5px;
+$space-sm: 10px;
+$space-md: 20px;
+$space-lg: 30px;
+$space-xl: 40px;
+$space-xxl: 50px;
