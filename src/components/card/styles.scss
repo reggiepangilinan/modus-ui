@@ -3,9 +3,9 @@
 
 %cardContainer {
   color: black;
-  background-color: $primary-bg-color;
+  background-color: $neutral-color-l4;
   border-radius: 4px;
-  border: 1px solid $border-color;
+  border: 1px solid $neutral-color;
   padding: 10px;
   transition: all 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -13,17 +13,17 @@
 .cardContainer {
   @extend %cardContainer;
   &:hover {
-    box-shadow: 0 0 8px 0 $shadow-color;
+    box-shadow: 0 0 8px 0 $neutral-color-l2;
   }
 }
 
 .cardContainerWithShadow {
   @extend %cardContainer;
-  box-shadow: 0 0 8px 0 $shadow-color;
+  box-shadow: 0 0 8px 0 $neutral-color-l2;
 }
 
 .active {
-  background-color: $highlight-bg-color;
+  background-color: $neutral-color-l3;
   transition: all 0.4s ease-in-out;
   &:hover {
     box-shadow: none;
