@@ -5,7 +5,7 @@
 .tabsContainer {
   margin: 10px 0px;
   display: flex;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid $neutral-color;
 }
 
 .tabItemContainer {
@@ -20,9 +20,9 @@
       margin: 10px 0px 0px 10px;
     }
 
-    color: $brand-dark-color;
+    color: $brand-primary-color;
     &:hover {
-      background-color: darken($primary-bg-color, 7%);
+      background-color: darken($neutral-color-l4, 7%);
     }
     transition: all 0.4s ease-in-out;
   }
@@ -34,9 +34,9 @@
     label {
       margin: 10px 0px 0px 10px;
     }
-    color: lighten($primary-text-color, 35%);
+    color: lighten($neutral-color-d4, 35%);
     &:hover {
-      background-color: darken($primary-bg-color, 2%);
+      background-color: darken($neutral-color-l4, 2%);
     }
   }
 }

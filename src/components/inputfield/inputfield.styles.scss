@@ -14,7 +14,7 @@
     color: $error-color;
   }
   input {
-    color: $primary-text-color;
+    color: $neutral-color-d4;
     font-family: $font-family;
     font-size: $base-font-size;
     width: 230px;
@@ -29,8 +29,8 @@
     }
 
     &:disabled {
-      background-color: $disabled-input-color;
-      color: lighten($primary-text-color, 50%);
+      background-color: $neutral-color-l1;
+      color: lighten($neutral-color-d4, 50%);
     }
     &::placeholder {
       color: #999999;

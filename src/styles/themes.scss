@@ -38,25 +38,3 @@ $neutral-color-l1: #eeeeee !default;
 $neutral-color-l2: #f3f3f3 !default;
 $neutral-color-l3: #f8f8f8 !default;
 $neutral-color-l4: #ffffff !default;
-
-//=========================== OLD COLORS - THIS WILL BE REMOVED
-$black: #000000 !default;
-$white: #fff !default;
-
-$brand-dark-color: darken($brand-primary-color, 40%) !default;
-$shadow-color: #e5e5e5;
-$border-color: #e5e5e5;
-
-$primary-text-color: #2d2c2c !default;
-$secondary-text-color: #707070 !default;
-$highlight-text-color: $brand-primary-color !default;
-
-$primary-bg-color: $white !default;
-$secondary-bg-color: #f2f2f2 !default;
-$highlight-bg-color: #eaf1f9 !default;
-
-$primary-button-color: $brand-primary-color !default;
-$secondary-button-color: $brand-dark-color !default;
-$disabled-button-color: #e5e5e5 !default;
-
-$disabled-input-color: #f4f4f4 !default;

@@ -47,23 +47,23 @@
       margin: 0px;
     }
     &:checked ~ .checkmark {
-      background-color: $white;
+      background-color: $neutral-color-l4;
       border: 1.5px solid $brand-primary-color;
     }
 
     &:disabled ~ .checkmark {
-      border: 1.5px solid darken($disabled-input-color, 10%);
-      background: lighten($disabled-input-color, 5%);
+      border: 1.5px solid darken($neutral-color-l1, 10%);
+      background: lighten($neutral-color-l1, 5%);
       cursor: not-allowed;
     }
 
     &:checked:disabled ~ .checkmark {
-      border: 1.5px solid darken($disabled-input-color, 20%);
+      border: 1.5px solid darken($neutral-color-l1, 20%);
       cursor: not-allowed;
     }
     &:checked:disabled ~ .checkmark:after {
       display: block;
-      background: darken($disabled-input-color, 20%);
+      background: darken($neutral-color-l1, 20%);
       cursor: not-allowed;
     }
   }
@@ -78,8 +78,8 @@
     left: 0;
     min-height: 17px;
     min-width: 17px;
-    background-color: $white;
-    border: 1.5px solid darken($border-color, 30%);
+    background-color: $neutral-color-l4;
+    border: 1.5px solid darken($neutral-color, 30%);
     border-radius: 50%;
     margin: 0px;
 
@@ -98,19 +98,19 @@
   }
 
   &:hover input ~ .checkmark {
-    background-color: $white;
+    background-color: $neutral-color-l4;
     border: 1.5px solid $brand-primary-color;
   }
 
   &:hover input:disabled ~ .checkmark {
-    border: 1.5px solid darken($disabled-input-color, 10%);
-    background: lighten($disabled-input-color, 5%);
+    border: 1.5px solid darken($neutral-color-l1, 10%);
+    background: lighten($neutral-color-l1, 5%);
     cursor: not-allowed;
   }
 
   &:hover input:checked:disabled ~ .checkmark {
-    border: 1.5px solid darken($disabled-input-color, 20%);
-    background: lighten($disabled-input-color, 5%);
+    border: 1.5px solid darken($neutral-color-l1, 20%);
+    background: lighten($neutral-color-l1, 5%);
     cursor: not-allowed;
   }
 }
