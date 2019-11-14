@@ -23,6 +23,9 @@ npm i --save modus-ui
 
 **modus-ui** is open-source. Here is the link to repo https://github.com/reggieboyYEAH/modus-ui
 
+## Demo 
+https://modus-ui.netlify.com
+
 ## How to develop?
 
  1. Download or Clone the repo.
