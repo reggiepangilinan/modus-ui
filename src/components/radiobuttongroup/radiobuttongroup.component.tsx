@@ -45,7 +45,7 @@ export const RadioButtonGroup: FunctionComponent<RadioButtonGroupProps> = (
                   name={option.text}
                   type="radio"
                   value={option.value}
-                  checked={props.value === option.value}
+                  checked={props.value == option.value}
                   disabled={props.disabled}
                   onBlur={props.onBlur}
                   onChange={props.onChange}

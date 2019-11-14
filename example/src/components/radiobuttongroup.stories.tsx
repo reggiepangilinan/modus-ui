@@ -63,4 +63,16 @@ storiesOf('Components/RadioButtonGroup', module)
         itemsStyle={{ flexDirection: 'row' }}
       />
     )
+  )
+  .add(
+    'With Error',
+    (): ReactElement => (
+      <RadioButtonGroup
+        options={options}
+        label="This is some label"
+        value="hot"
+        touched
+        error="Oops something is not right"
+      />
+    )
   );

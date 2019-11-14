@@ -16,7 +16,7 @@
     }
   }
   .labelError {
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
     font-weight: $font-weight-semibold;
     color: $error-color;
   }
@@ -33,6 +33,7 @@
 
     // Box.
     & + p:before {
+      transition: all $transition-slow ease-in-out;
       content: '';
       margin-right: $space-md;
       display: inline-block;
@@ -41,7 +42,7 @@
       height: $size-20px;
       border-radius: $border-radius;
       background: $neutral-color-l4;
-      box-shadow: 0 0 0 $border-width-sm $brand-primary-color;
+      box-shadow: 0 0 0 $border-width-sm $brand-primary-color inset;
     }
 
     // Box hover
@@ -51,7 +52,7 @@
 
     // Box focus
     &:focus + p:before {
-      box-shadow: 0 0 0 $border-width-sm $brand-primary-color;
+      box-shadow: 0 0 0 $border-width-sm $brand-primary-color inset;
     }
 
     // Box checked
@@ -66,7 +67,7 @@
 
     // Disabled box.
     &:disabled + p:before {
-      box-shadow: 0 0 0 $border-width-sm $neutral-color;
+      box-shadow: 0 0 0 $border-width-sm $neutral-color inset;
       background: $neutral-color;
     }
 

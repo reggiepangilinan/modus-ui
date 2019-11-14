@@ -24,7 +24,7 @@
     &:hover {
       background-color: darken($neutral-color-l4, 7%);
     }
-    transition: all 0.4s ease-in-out;
+    transition: all $transition-slow ease-in-out;
   }
 
   .tab {
