@@ -23,6 +23,7 @@ export type IconProps = {
   style?: CSSProperties;
   transform?: IconAngle | string;
   size?: IconSize | number;
+  className?: string;
 };
 
 const getIconSize = (props: IconProps): string | number | undefined => {
@@ -39,6 +40,7 @@ export const Icon: FunctionComponent<IconProps> = (
     transform={props.transform}
     style={{ display: props.block, ...props.style }}
     aria-label={IconTypes[props.type]}
+    className={props.className}
   >
     <path d={props.type} />
   </svg>

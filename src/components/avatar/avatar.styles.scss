@@ -1,0 +1,54 @@
+@import '../../styles/animations.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/themes.scss';
+
+.avatar {
+  border-radius: 100%;
+}
+
+%avatarDefault {
+  background-color: $neutral-color;
+  border-radius: 50%;
+  overflow: hidden;
+
+  svg {
+    fill: $neutral-color-l2;
+    position: relative;
+    bottom: -2px;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+  }
+}
+
+.avatarDefaultXL {
+  @extend %avatarDefault;
+  svg {
+    bottom: -6px;
+  }
+}
+
+.avatarDefaultLG {
+  @extend %avatarDefault;
+  svg {
+    bottom: -4px;
+  }
+}
+
+.avatarDefaultMD {
+  @extend %avatarDefault;
+  svg {
+    bottom: -3px;
+  }
+}
+
+.avatarDefaultSM {
+  @extend %avatarDefault;
+}
+
+.avatarDefaultXS {
+  @extend %avatarDefault;
+  svg {
+    bottom: -1px;
+  }
+}

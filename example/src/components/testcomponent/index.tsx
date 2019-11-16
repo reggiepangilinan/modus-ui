@@ -12,6 +12,6 @@ export type Props = {
 } & PropsWithChildren<ReactNode>;
 
 /** Yes */
-export const Card = (props: Props): ReactElement => {
+export const TestComponent = (props: Props): ReactElement => {
   return <div onClick={props.onClick}>{props.children}</div>;
 };
