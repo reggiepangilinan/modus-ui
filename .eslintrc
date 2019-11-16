@@ -29,7 +29,8 @@
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/prefer-interface": 0,
-    "@typescript-eslint/no-empty-interface": 0
+    "@typescript-eslint/no-empty-interface": 0,
+    "react/display-name": 0
   },
   "settings": {
     "react": {

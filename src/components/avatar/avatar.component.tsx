@@ -5,6 +5,9 @@ import { IconTypes } from '../icon/icontypes.enum';
 import styles from './avatar.styles.scss';
 
 export enum AvatarSize {
+  /**
+   * Yesy
+   */
   XSmall = 24,
   Small = 28,
   Medium = 36,
@@ -12,7 +15,13 @@ export enum AvatarSize {
   XLarge = 96
 }
 
+/**
+ * Yesy
+ */
 export type AvatarProps = {
+  /**
+   * Yesy
+   */
   src?: string;
   size?: AvatarSize;
   alt?: string;
@@ -35,6 +44,10 @@ const getAvatarDefaultStyle = (size: AvatarSize): string => {
   }
 };
 
+/**
+ * Yesy `AvatarProps`
+ * @param props
+ */
 export const Avatar: FC<AvatarProps> = (props: AvatarProps): ReactElement => {
   const size = props.size ? props.size : AvatarSize.Small;
   const style = {
