@@ -5,21 +5,21 @@ import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-
 import { Avatar, AvatarSize } from '../avatar/avatar.component';
 
 export default {
-  title: 'Components/Avatars',
+  title: 'Components|Avatar',
   component: Avatar
 };
 
 export const avatarsSample = (): ReactElement => (
   <>
     <Avatar src={avatarsample} size={AvatarSize.XLarge} />
-    <Avatar src={avatarsample} size={AvatarSize.Large} />
+    <Avatar size={AvatarSize.Large} />
     <Avatar src={avatarsample} size={AvatarSize.Medium} />
-    <Avatar src={avatarsample} size={AvatarSize.Small} />
+    <Avatar size={AvatarSize.Small} />
     <Avatar src={avatarsample} size={AvatarSize.XSmall} />
   </>
 );
 avatarsSample.story = {
-  name: 'Image',
+  name: 'Sample',
   decorators: [
     (storyFn: () => ReactNode): ReactElement => (
       <SpaceAroundStory>{storyFn()}</SpaceAroundStory>
@@ -38,6 +38,24 @@ export const avatarsDefault = (): ReactElement => (
 );
 avatarsDefault.story = {
   name: 'Default',
+  decorators: [
+    (storyFn: () => ReactNode): ReactElement => (
+      <SpaceAroundStory>{storyFn()}</SpaceAroundStory>
+    )
+  ]
+};
+
+export const avatarImage = (): ReactElement => (
+  <>
+    <Avatar src={avatarsample} size={AvatarSize.XLarge} />
+    <Avatar src={avatarsample} size={AvatarSize.Large} />
+    <Avatar src={avatarsample} size={AvatarSize.Medium} />
+    <Avatar src={avatarsample} size={AvatarSize.Small} />
+    <Avatar src={avatarsample} size={AvatarSize.XSmall} />
+  </>
+);
+avatarImage.story = {
+  name: 'Image',
   decorators: [
     (storyFn: () => ReactNode): ReactElement => (
       <SpaceAroundStory>{storyFn()}</SpaceAroundStory>

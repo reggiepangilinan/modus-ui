@@ -1,0 +1,216 @@
+import { ColorItem, ColorPalette, Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System|Colors" />
+
+# Colors
+
+### Convention for variables
+
+For different shades of colors `modus-ui` uses suffix such as `-d1` `-d2` an so on to denote a darker shade of color.
+And for lighter colors it is `-l1` `-l2`
+
+Color variables that does not have this suffix are the baseline colors.
+
+Example
+
+```
+$brand-primary-color-d1    // A shade darker
+$brand-primary-color       // This is the base
+$brand-primary-color-l1    // A shade lighter
+```
+
+## Brand Color
+
+The brand color defines the visual elements used to embody the product identity and communicate ideas.
+In **modus-ui**, brand color consists of a **Primary** and **Secondary** color.
+
+### Primary
+
+Is the color that represents the brand. Used mainly in elements that are important to capture the users attention.
+It is inviting to purposely guide users to execute an action.
+
+<ColorPalette>
+  <ColorItem title="East Bay" colors={['#31465F']} />
+</ColorPalette>
+
+**modus-ui** provides different shades of **Primary** color to give range and flexibility to the UI design that can be used in different context such as highlight or subtle contrasts of elements.
+Each shade is 2x lighter and darker. The middle one is the base primary color.
+
+<ColorPalette>
+  <ColorItem
+    title="Primary Color Shades"
+    colors={['#223040', '#293A4E', '#31465F', '#56677C', '#748293']}
+  />
+</ColorPalette>
+
+```
+//SCSS Variables
+
+$brand-primary-color-d2: #223040 !default;
+$brand-primary-color-d1: #293a4e !default;
+$brand-primary-color: #31465F !default;
+$brand-primary-color-l1: #56677c !default;
+$brand-primary-color-l2: #748293 !default;
+```
+
+### Secondary
+
+Is the color that is used to provide contrasts or to accentuate the **Primary** color.
+The **Secondary** color provides that "fun" or "twist" the compliments the background or the primary color.
+Mainly used in borders and elements that needs subtle emphasis or attention.
+
+<ColorPalette>
+  <ColorItem title="Orange Peel" colors={['#FF9900']} />
+</ColorPalette>
+
+Secondary color also comes in different shades.
+
+<ColorPalette>
+  <ColorItem
+    title="Secondary Color Shades"
+    colors={['#AC6800', '#D17E00', '#FF9900', '#FFAB2E', '#FFBA54']}
+  />
+</ColorPalette>
+
+```
+//SCSS Variables
+
+$brand-secondary-color-d2: #ac6800 !default;
+$brand-secondary-color-d1: #d17e00 !default;
+$brand-secondary-color: #ff9900 !default;
+$brand-secondary-color-l1: #ffab2e !default;
+$brand-secondary-color-l2: #ffba54 !default;
+```
+
+## Functional Color
+
+Is a color that represents a clear message and status, such as success, error, information, warning etc.
+The Functional colors selection that **modus-ui** has is very common and it complies with the user's basic understanding of color and it's meaning.
+
+### Success
+
+Used to denote a status of success, done or complete.
+
+<ColorPalette>
+  <ColorItem title="Emerald" colors={['#42c379']} />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Success Color Shades"
+    colors={['#2A7D4E', '#42c379', '#75D39D']}
+  />
+</ColorPalette>
+
+```
+//SCSS Variables
+
+$success-color-d1: #2a7d4e !default;
+$success-color: #42c379 !default;
+$success-color-l2: #75d39d !default;
+```
+
+### Information
+
+Used to denote a status of information.
+
+<ColorPalette>
+  <ColorItem title="Azure Radiance" colors={['#007af8']} />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Information Color Shades"
+    colors={['#0059B5', '#007af8', '#73B6FB']}
+  />
+</ColorPalette>
+
+```
+//SCSS Variables
+
+$info-color-d1: #0059b5 !default;
+$info-color: #007af8 !default;
+$info-color-l2: #73b6fb !default;
+```
+
+### Warning
+
+Used to denote a status of warning.
+
+<ColorPalette>
+  <ColorItem title="Coral" colors={['#ff9347']} />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Warning Color Shades"
+    colors={['#A35E2E', '#ff9347', '#FFBA89']}
+  />
+</ColorPalette>
+
+```
+//SCSS Variables
+
+$warning-color-d1: #a35e2e !default;
+$warning-color: #ff9347 !default;
+$warning-color-l2: #ffba89 !default;
+```
+
+### Error / Danger
+
+Used to denote a status of error or danger.
+
+<ColorPalette>
+  <ColorItem title="Radical Red" colors={['#ff4260']} />
+</ColorPalette>
+
+<ColorPalette>
+  <ColorItem
+    title="Error / Danger Color Shades"
+    colors={['#A32A3E', '#ff4260', '#FF97A8']}
+  />
+</ColorPalette>
+
+```
+//SCSS Variables
+
+$error-color-d1: #a32a3e !default;
+$error-color: #ff4260 !default;
+$error-color-l2: #ff97a8 !default;
+```
+
+## Neutral Color
+
+Is a color mainly used in large part of text content or text interface. Additionally it is used in common areas
+such as background, borders, dividers. **modus-ui** recommends to use contrasts such as light and dark background.
+
+<ColorPalette>
+  <ColorItem
+    title="Monochrome"
+    colors={[
+      '#333333',
+      '#444444',
+      '#666666',
+      '#999999',
+      '#dddddd',
+      '#eeeeee',
+      '#f3f3f3',
+      '#f8f8f8',
+      '#ffffff'
+    ]}
+  />
+</ColorPalette>
+
+```
+//SCSS Variables
+
+$neutral-color-d4: #333333 !default;
+$neutral-color-d3: #444444 !default;
+$neutral-color-d2: #666666 !default;
+$neutral-color-d1: #999999 !default;
+$neutral-color: #dddddd !default;
+$neutral-color-l1: #eeeeee !default;
+$neutral-color-l2: #f3f3f3 !default;
+$neutral-color-l3: #f8f8f8 !default;
+$neutral-color-l4: #ffffff !default;
+```

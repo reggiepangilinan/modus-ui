@@ -16,7 +16,13 @@ export type ButtonProps = {
   href?: string;
   type?: 'button' | 'submit' | 'reset' | undefined;
   disabled?: boolean;
+  /**
+   * Displays an `Icon` on the left side of the button
+   */
   iconLeft?: ReactNode;
+  /**
+   * Displays an `Icon` on the right side of the button
+   */
   iconRight?: ReactNode;
   style?: React.CSSProperties;
 };
@@ -37,6 +43,9 @@ const getButtonStyle = (buttonType: ButtonKind): string => {
   }
 };
 
+/**
+ * The `Button` component
+ */
 export const Button: FunctionComponent<ButtonProps> = (
   props: ButtonProps
 ): ReactElement => {

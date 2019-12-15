@@ -12,6 +12,9 @@ export type CheckboxProps = {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
+/**
+ * The `Checkbox` component
+ */
 export const Checkbox: FunctionComponent<CheckboxProps> = (
   props: CheckboxProps
 ): ReactElement => {
