@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import { ReactNode } from 'react';
 
-import { Status, StatusType } from '../../index';
 import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-around-story.component';
+import { Status, StatusType } from '../status/status.component';
 
 export default {
   title: 'Components|Status',

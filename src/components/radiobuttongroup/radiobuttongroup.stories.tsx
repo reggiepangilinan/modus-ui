@@ -1,6 +1,9 @@
 import React, { ReactElement } from 'react';
 
-import { RadioButtonGroup, RadioButtonGroupOption } from '../../index';
+import {
+  RadioButtonGroup,
+  RadioButtonGroupOption
+} from '../radiobuttongroup/radiobuttongroup.component';
 
 const options: RadioButtonGroupOption[] = [
   { id: 'hot', text: 'This is Hot', value: 'hot' },

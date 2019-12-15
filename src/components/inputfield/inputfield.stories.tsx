@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { InputField } from '../../index';
+import { InputField } from '../inputfield/inputfield.component';
 
 export default {
   title: 'Components|InputField',

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 
-import { Spinner } from '../../index';
+import { Spinner } from '../spinner/spinner.component';
 
 export default {
   title: 'Components|Spinner',

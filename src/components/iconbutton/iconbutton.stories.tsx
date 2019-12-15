@@ -1,13 +1,9 @@
 import React, { ReactElement, ReactNode } from 'react';
 
-import {
-  IconAngle,
-  IconButton,
-  IconButtonKind,
-  IconSize,
-  IconTypes
-} from '../../index';
 import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-around-story.component';
+import { IconAngle, IconSize } from '../icon/icon.component';
+import { IconTypes } from '../icon/icontypes.enum';
+import { IconButton, IconButtonKind } from '../iconbutton/iconbutton.component';
 
 export default {
   title: 'Components|IconButton',

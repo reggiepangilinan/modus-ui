@@ -5,9 +5,10 @@ import React, {
   ReactNode
 } from 'react';
 
-import { Icon, IconAngle, IconSize, IconTypes } from '../../index';
 import { FlexWrapStory } from '../../story-wrappers/flex-wrap-story/flex-wrap-story.component';
 import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-around-story.component';
+import { Icon, IconAngle, IconSize } from '../icon/icon.component';
+import { IconTypes } from '../icon/icontypes.enum';
 
 export default {
   title: 'Components|Icons',
