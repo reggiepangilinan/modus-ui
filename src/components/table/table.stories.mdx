@@ -10,25 +10,157 @@ import {
   TableHeader,
   TableRow
 } from '../../index';
+import { getLotsOfRows } from './getLotsOfRows';
 
 <Meta title="Components|Table" component={Table} />
 
 # Table
 
+The `Table` Component. It consists of multiple components.
+
+<Preview>
+  <Story name="Sample">
+    <Table
+      isLoading={false}
+      header={
+        <TableHead>
+          <TableHeader maxWidth="120px" label="Name" />
+          <TableHeader maxWidth="100px" label="Age" />
+          <TableHeader label="Description" />
+          <TableHeader maxWidth="100px" label="" />
+        </TableHead>
+      }
+      rows={[
+        <TableRow key={'1'}>
+          <TableCell>John</TableCell>
+          <TableCell>40</TableCell>
+          <TableCell>Well, Shake it up baby now!</TableCell>
+          <TableCell align="right">
+            <IconButton
+              type={IconTypes.ellipsis}
+              transform={IconAngle.NegativeNinety}
+              size={IconSize.XSmall}
+            />
+          </TableCell>
+        </TableRow>,
+        <TableRow key={'2'}>
+          <TableCell>Paul</TableCell>
+          <TableCell>20</TableCell>
+          <TableCell>Shake it up baby!</TableCell>
+          <TableCell align="right">
+            <IconButton
+              type={IconTypes.ellipsis}
+              transform={IconAngle.NegativeNinety}
+              size={IconSize.XSmall}
+            />
+          </TableCell>
+        </TableRow>,
+        <TableRow key={'3'}>
+          <TableCell>George</TableCell>
+          <TableCell>32</TableCell>
+          <TableCell>TWIST AND SHOUT!</TableCell>
+          <TableCell align="right">
+            <IconButton
+              type={IconTypes.ellipsis}
+              transform={IconAngle.NegativeNinety}
+              size={IconSize.XSmall}
+            />
+          </TableCell>
+        </TableRow>,
+        <TableRow key={'4'}>
+          <TableCell>Ringo</TableCell>
+          <TableCell>43</TableCell>
+          <TableCell>TWIST AND SHOUT!</TableCell>
+          <TableCell align="right">
+            <IconButton
+              type={IconTypes.ellipsis}
+              transform={IconAngle.NegativeNinety}
+              size={IconSize.XSmall}
+            />
+          </TableCell>
+        </TableRow>
+      ]}
+    />
+  </Story>
+</Preview>
+
+List of `TableProps`
+
 <Props of={Table} />
 
-# TableCell
+### TableHead and TableHeader
 
-<Props of={TableCell} />
-
-# TableHead
-
-<Props of={TableHead} />
-
-# TableHeader
+`TableHead` produces a `thead` html element is a wrapper for
+the `TableHeader` which is equivalent to `th` in html
 
 <Props of={TableHeader} />
 
-# TableRow
+### TableRow
+
+`TableRow` is a equivalent to `tr` in html it wraps the `TableCell` which is equivalent to `td`.
 
 <Props of={TableRow} />
+
+### TableCell
+
+<Props of={TableCell} />
+
+# Empty
+
+When a table contains no data it shows an empty placeholder.
+
+<Preview>
+  <Story name="Empty">
+    <Table
+      isLoading={false}
+      header={
+        <TableHead>
+          <TableHeader maxWidth="120px" label="Name" />
+          <TableHeader maxWidth="100px" label="Age" />
+          <TableHeader label="Description" />
+        </TableHead>
+      }
+    />
+  </Story>
+</Preview>
+
+# Loading
+
+It shows a spinner when loading data
+
+<Preview>
+  <Story name="Loading">
+    <Table
+      isLoading={true}
+      header={
+        <TableHead>
+          <TableHeader maxWidth="120px" label="Name" />
+          <TableHeader maxWidth="100px" label="Age" />
+          <TableHeader label="Description" />
+        </TableHead>
+      }
+    />
+  </Story>
+</Preview>
+
+# Overflow with scroll
+
+To handle huge sets of data. Set a the `height` property if the data will automatially overflow with scrolling.
+
+<Preview>
+  <Story name="Overflow">
+    <Table
+      isLoading={false}
+      height={'50vh'}
+      header={
+        <TableHead>
+          <TableHeader maxWidth="120px" label="Name" />
+          <TableHeader maxWidth="100px" label="Age" />
+          <TableHeader label="Description" />
+          <TableHeader maxWidth="100px" label="" />
+        </TableHead>
+      }
+      rows={getLotsOfRows()}
+    />
+  </Story>
+</Preview>
