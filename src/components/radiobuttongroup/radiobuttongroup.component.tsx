@@ -3,7 +3,7 @@ import React, { CSSProperties, FunctionComponent, ReactElement } from 'react';
 import styles from './radiobuttongroup.styles.scss';
 
 export type RadioButtonGroupProps = {
-  name?: string;
+  id?: string;
   label?: string;
   touched?: boolean;
   error?: string;
@@ -29,7 +29,7 @@ export const RadioButtonGroup: FunctionComponent<RadioButtonGroupProps> = (
   if (!props.options) throw Error('options is required');
 
   return (
-    <div className={styles.radioButtonGroup}>
+    <div className={styles.radioButtonGroup} id={props.id}>
       <div role="group">
         {displayError ? (
           <legend className={styles.labelError}>{props.error}</legend>

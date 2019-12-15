@@ -13,6 +13,9 @@ export enum AvatarSize {
 }
 
 export type AvatarProps = {
+  /**
+   * When source is empty it will display the default `Avatar`
+   */
   src?: string;
   size?: AvatarSize;
   alt?: string;
@@ -35,6 +38,9 @@ const getAvatarDefaultStyle = (size: AvatarSize): string => {
   }
 };
 
+/**
+ * The `Avatar` component
+ */
 export const Avatar: FC<AvatarProps> = (props: AvatarProps): ReactElement => {
   const size = props.size ? props.size : AvatarSize.Small;
   const style = {
@@ -56,4 +62,7 @@ export const Avatar: FC<AvatarProps> = (props: AvatarProps): ReactElement => {
       <Icon type={IconTypes.useralt} />
     </span>
   );
+};
+Avatar.defaultProps = {
+  size: AvatarSize.Small
 };

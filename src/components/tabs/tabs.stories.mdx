@@ -1,0 +1,32 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { TabItem, Tabs } from '../tabs/tabs.component';
+
+<Meta title="Components|Tabs" component={Tabs} />
+
+# Tabs
+
+The `<Tabs/>` component is a container for multiple `<TabItem/>`
+
+<Preview>
+  <Story name="Tabs">
+    <Tabs>
+      <TabItem label={'Tab 1'} active={true} />
+      <TabItem label={'Tab 2'} active={false} />
+      <TabItem label={'Tab 3'} active={false} />
+    </Tabs>
+  </Story>
+</Preview>
+
+## TabItem
+
+Represents each Tab
+
+<Preview>
+  <Story name="TabItem">
+    <Tabs>
+      <TabItem label={'ThisIsATabItem'} active={true} />
+    </Tabs>
+  </Story>
+</Preview>
+
+<Props of={TabItem} />
