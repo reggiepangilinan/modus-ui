@@ -78,6 +78,7 @@
 
 .buttonLink {
   @extend %button;
+  background-color: $neutral-color-l4;
   a {
     color: $brand-primary-color;
   }
