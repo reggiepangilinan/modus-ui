@@ -6,7 +6,18 @@
 export const customStyles: any = {
   control: (base: any) => ({
     ...base,
-    minHeight: 32
+    minHeight: 32,
+    borderRadius: '3px',
+    border: '1px solid #999999',
+
+    boxShadow: '0 0 0 1px #99999',
+    '&:hover': {
+      border: '1px solid #31465f'
+    },
+
+    '&:active': {
+      border: '1px solid #31465f'
+    }
   }),
   dropdownIndicator: (base: any) => ({
     ...base,

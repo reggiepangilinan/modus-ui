@@ -2,31 +2,27 @@
 @import '../../styles/themes.scss';
 
 .react-select-override-style {
-  background-color: red !important;
-  & {
-    margin: 5px 0px;
-    font-family: $font-family;
-    //   font-size: $base-font-size;
-    font-size: 120px;
-    .select-prefix__control {
-      box-shadow: $neutral-color 0px 1px 2px inset;
-      border: 1px solid darken($neutral-color, 10%);
-      border-radius: $border-radius;
-
-      &:disabled {
-        color: $neutral-color-d4;
-      }
-
-      &.select-prefix__control--is-focused,
-      &.select-prefix__control--menu-is-open {
-        outline: none;
-        border: 1px solid $brand-primary-color !important;
-      }
+  margin: 5px 0px;
+  font-family: $font-family;
+  font-size: 120px;
+  .select-prefix__control {
+    box-shadow: $neutral-color 0px 1px 2px inset;
+    border: 1px solid darken($neutral-color, 10%);
+    border-radius: $border-radius;
+    background-color: red !important;
+    &:disabled {
+      color: $neutral-color-d4;
     }
+  }
 
-    .select-prefix__placeholder {
-      font-size: 0.8em;
-      color: lighten($neutral-color-d4, 65%);
-    }
+  .select-prefix__control--menu-is-open,
+  .select-prefix__control--is-focused {
+    outline: none;
+    border: 1px solid $brand-primary-color !important;
+  }
+
+  .select-prefix__placeholder {
+    font-size: 0.8em;
+    color: lighten($neutral-color-d4, 65%);
   }
 }
