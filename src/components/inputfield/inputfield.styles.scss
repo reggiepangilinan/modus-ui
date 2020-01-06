@@ -7,7 +7,7 @@
   label {
     line-height: 18px;
     font-size: 12px; //TODO: Proper variable
-    font-weight: 600; //TODO: Proper variable
+    font-weight: $font-weight-semibold;
     margin-bottom: 5px;
   }
   .labelError {
