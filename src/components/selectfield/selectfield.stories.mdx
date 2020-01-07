@@ -1,0 +1,127 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import {
+  SelectField,
+  SelectFieldOption
+} from '../selectfield/selectfield.component';
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+];
+
+<Meta
+  title="Components|SelectField"
+  component={SelectField}
+  decorators={[
+    storyFn => <div style={{ margin: '20px 0px 150px' }}>{storyFn()}</div>
+  ]}
+/>
+
+# SelectField
+
+The `<SelectField/>` Component.
+
+<Props of={SelectField} />
+
+## Default
+
+<Preview>
+  <Story name="Default">
+    <SelectField
+      name="defaultField"
+      label=""
+      placeholder="Placeholder"
+      currentValue={undefined}
+      options={options}
+    />
+  </Story>
+</Preview>
+
+## With Label
+
+<Preview>
+  <Story name="With Label">
+    <SelectField
+      name="selectFieldLabel"
+      label="With Label"
+      placeholder="Placeholder"
+      currentValue={undefined}
+      options={options}
+    />
+  </Story>
+</Preview>
+
+## With Value Selected
+
+<Preview>
+  <Story name="With Value Selected">
+    <SelectField
+      name="selectFieldWithValue"
+      label="This one has value selected"
+      placeholder="Placeholder"
+      currentValue={options[0]}
+      options={options}
+    />
+  </Story>
+</Preview>
+
+## With multiple value selected
+
+<Preview>
+  <Story name="With multiple value selected">
+    <SelectField
+      name="selectFieldWithValue"
+      label="This one has value multiple selected"
+      placeholder="Placeholder"
+      currentValue={options}
+      options={options}
+      multi
+    />
+  </Story>
+</Preview>
+
+## With Error
+
+<Preview>
+  <Story name="With Error">
+    <SelectField
+      name="selectFieldWithError"
+      label="This one has value selected"
+      placeholder="Placeholder"
+      currentValue={undefined}
+      touched={true}
+      error={'This is a sample error message'}
+      options={options}
+    />
+  </Story>
+</Preview>
+
+## Disabled
+
+<Preview>
+  <Story name="Disabled">
+    <SelectField
+      name="selectFieldDisabled"
+      label="This field is disabled"
+      placeholder="Placeholder"
+      currentValue={undefined}
+      options={options}
+      disabled
+    />
+  </Story>
+</Preview>
+
+## Disabled with value selected
+
+<Preview>
+  <Story name="Disabled with value selected">
+    <SelectField
+      name="selectFieldDisabledWithValue"
+      label="This one has value selected"
+      placeholder="Placeholder"
+      currentValue={options[0]}
+      options={options}
+      disabled
+    />
+  </Story>
+</Preview>
