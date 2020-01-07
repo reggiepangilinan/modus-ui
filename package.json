@@ -64,6 +64,7 @@
     "gh-pages": "1.2.0",
     "import-sort-style-module": "6.0.0",
     "node-sass": "4.13.0",
+    "plop": "^2.5.3",
     "prettier": "1.18.2",
     "prettier-plugin-import-sort": "0.0.3",
     "prop-types": "15.7.2",
