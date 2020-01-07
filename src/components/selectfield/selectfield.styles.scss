@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+@import '../../styles/themes.scss';
+
+.selectField {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 12px; //TODO: Proper variable
+    font-weight: $font-weight-semibold;
+    margin-bottom: $space-xs;
+  }
+  .labelError {
+    color: $error-color;
+  }
+  margin-bottom: $space-xs;
+}
