@@ -29,7 +29,7 @@
 
     &:disabled {
       background-color: $neutral-color-l1;
-      color: lighten($neutral-color-d4, 50%);
+      color: $neutral-color-d2;
     }
     &::placeholder {
       color: #999999;

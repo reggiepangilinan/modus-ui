@@ -50,3 +50,28 @@ export const withError = (): ReactElement => (
 withError.story = {
   name: 'With Error'
 };
+
+export const disabled = (): ReactElement => (
+  <InputField
+    label="This is a label"
+    type={'text'}
+    placeholder="Placeholder"
+    disabled
+  />
+);
+disabled.story = {
+  name: 'Disabled'
+};
+
+export const disabledWithValue = (): ReactElement => (
+  <InputField
+    label="This is a label"
+    type={'text'}
+    placeholder="Placeholder"
+    disabled
+    value="Yes this is a value"
+  />
+);
+disabled.story = {
+  name: 'Disabled with value'
+};

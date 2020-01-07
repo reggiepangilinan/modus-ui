@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import './selectfield.global.scss';
 
 import React, { FunctionComponent, ReactElement } from 'react';
 import Select from 'react-select';
@@ -23,8 +22,7 @@ type Props = {
   searchable?: boolean;
   clearable?: boolean;
   multi?: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  currentValue?: any;
+  currentValue?: SelectFieldOption | SelectFieldOption[];
   options: SelectFieldOption[];
   onChange?: any;
 };
@@ -41,8 +39,6 @@ export const SelectField: FunctionComponent<Props> = (
         <label> {props.label} </label>
       )}
       <Select
-        className={`react-select-override-style`}
-        classNamePrefix={'select-prefix'}
         styles={customStyles}
         isDisabled={props.disabled}
         isSearchable={props.searchable}
