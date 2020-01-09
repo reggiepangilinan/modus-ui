@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { {{titleCase name}} } from '../{{lowerCase name}}/{{lowerCase name}}.component';
+
+<Meta
+  title="Components|{{titleCase name}}"
+  component={ {{titleCase name}} }
+  decorators={[storyFn => <div>{storyFn()}</div>]}
+/>
+
+# {{titleCase name}}
+
+The `<{{titleCase name}}/>` Component.
+
+<Props of={ {{titleCase name}} } />
+
+## Default
+
+<Preview>
+  <Story name="Default">
+    <{{titleCase name}} text={'Hello from {{titleCase name}} component'}/>
+  </Story>
+</Preview>
