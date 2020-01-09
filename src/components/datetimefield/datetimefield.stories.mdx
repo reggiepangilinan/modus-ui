@@ -1,0 +1,106 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import {
+  DateTimeField,
+  createOptionForDateTimeField,
+  defaultDateTimeFieldOptions
+} from '../datetimefield/datetimefield.component';
+import { DateTimeFieldControlled } from '../datetimefield/datetimefield.more.stories';
+
+<Meta
+  title="Components|DateTimeField"
+  component={DateTimeField}
+  decorators={[
+    storyFn => <div style={{ margin: '20px 0px 350px' }}>{storyFn()}</div>
+  ]}
+/>
+
+# DateTimeField
+
+The `<DateTimeField/>` Component.
+
+<Props of={DateTimeField} />
+
+## Default
+
+<Preview>
+  <Story name="Default">
+    <DateTimeField
+      onChange={datefieldoption => {
+        alert(datefieldoption.value);
+      }}
+      currentValue={undefined}
+    />
+  </Story>
+</Preview>
+
+## Controlled Component
+
+<Preview>
+  <Story name="Controlled DateTimeField">
+    <DateTimeFieldControlled />
+  </Story>
+</Preview>
+
+## With Label
+
+<Preview>
+  <Story name="With Label">
+    <DateTimeField
+      label="This is a date field with placeholder"
+      placeholder="MM/DD/YYYY"
+      currentValue={undefined}
+    />
+  </Story>
+</Preview>
+
+## With Value
+
+<Preview>
+  <Story name="With Value">
+    <DateTimeField
+      label="This is a date field with value"
+      placeholder="MM/DD/YYYY"
+      currentValue={createOptionForDateTimeField('2001-01-01')}
+    />
+  </Story>
+</Preview>
+
+## With Error
+
+<Preview>
+  <Story name="With Error">
+    <DateTimeField
+      label="This is a date field with placeholder"
+      placeholder="MM/DD/YYYY"
+      currentValue={undefined}
+      touched={true}
+      error={'This is a sample error message'}
+    />
+  </Story>
+</Preview>
+
+## Disabled
+
+<Preview>
+  <Story name="Disabled">
+    <DateTimeField
+      label="This is a date field is disabled"
+      placeholder="MM/DD/YYYY"
+      currentValue={undefined}
+      disabled
+    />
+  </Story>
+</Preview>
+
+## Disabled with value
+
+<Preview>
+  <Story name="Disabled with value">
+    <DateTimeField
+      label="This is a date field is disabled with value"
+      placeholder="MM/DD/YYYY"
+      currentValue={createOptionForDateTimeField('2001-01-01')}
+      disabled
+    />
+  </Story>
+</Preview>
