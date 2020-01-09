@@ -1,9 +1,13 @@
 import React, { FC, ReactElement } from 'react';
+
 import styles from './{{name}}.styles.scss';
 
 export type {{titleCase name}}Props = {
-}
+  //Your props goes here
+  text: string;
+};
 
 export const {{titleCase name}}: FC<{{titleCase name}}Props> = (props: {{titleCase name}}Props): ReactElement => {
-    return (<>I am the {{titleCase name}} component</>);
-    }
+  //Your components goes here
+  return <div className={styles.{{camelCase name}} }>{props.text}</div>;
+};
