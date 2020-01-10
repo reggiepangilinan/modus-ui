@@ -1,6 +1,6 @@
 import chrono from 'chrono-node';
 import * as moment from 'moment';
-import React, { FC, ReactElement, useState } from 'react';
+import React, { FC, ReactElement, useEffect, useState } from 'react';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Select, { components as SelectComponents } from 'react-select';
 
@@ -188,6 +188,15 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
   const [options, setOptions] = useState(defaultDateTimeFieldOptions);
   const displayError = props.touched && props.error;
 
+  useEffect(() => {
+    if (props.currentValue) {
+      setOptions([
+        createOptionForDateTimeField(props.currentValue.value),
+        createCalendarOptions(props.currentValue.value)
+      ]);
+    }
+  }, [props.currentValue]);
+
   const handleInputChange = (value: any): any => {
     if (!value) {
       setOptions(defaultDateTimeFieldOptions);
@@ -195,27 +204,15 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
     }
     const date = chrono.parseDate(suggest(value.toLowerCase()));
     if (date) {
-      if (props.onChange) {
-        setTimeout(
-          () => props.onChange(createOptionForDateTimeField(date)),
-          1000
-        );
-      }
+      // if (props.onChange) {
+      //   props.onChange(createOptionForDateTimeField(date));
+      // }
       setOptions([
         createOptionForDateTimeField(date),
         createCalendarOptions(date)
       ]);
     } else {
       setOptions([]);
-    }
-  };
-
-  const onMenuOpen = (): any => {
-    if (props.currentValue) {
-      setOptions([
-        createOptionForDateTimeField(props.currentValue.value),
-        createCalendarOptions(props.currentValue.value)
-      ]);
     }
   };
 
@@ -232,22 +229,16 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
         isMulti={false}
         isClearable
         placeholder={props.placeholder}
-        value={props.currentValue ? props.currentValue : null}
+        value={props.currentValue}
         components={{ Group, Option }}
         filterOption={null}
-        isOptionSelected={(o, v): any => {
-          return v.some(i => {
-            if (i) {
-              return i.date.isSame(o.date, 'day');
-            }
-            return false;
-          });
-        }}
+        isOptionSelected={(o, v): boolean =>
+          v.some(i => i.date.isSame(o.date, 'day'))
+        }
         maxMenuHeight={380}
         options={options}
         onChange={props.onChange}
-        onInputChange={(value): void => handleInputChange(value)}
-        onMenuOpen={onMenuOpen}
+        onInputChange={handleInputChange}
       />
     </div>
   );

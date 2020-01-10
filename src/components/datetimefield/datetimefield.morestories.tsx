@@ -1,9 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 
-import {
-  DateTimeField,
-  DateTimeFieldOption
-} from '../datetimefield/datetimefield.component';
+import { DateTimeField, DateTimeFieldOption } from './datetimefield.component';
 
 export const DateTimeFieldControlled = (): ReactElement => {
   const [state, setstate] = useState<DateTimeFieldOption>();
