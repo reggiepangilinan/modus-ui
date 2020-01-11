@@ -1,5 +1,5 @@
 import chrono from 'chrono-node';
-import * as moment from 'moment';
+import moment from 'moment';
 import React, { FC, ReactElement, useEffect, useState } from 'react';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Select, { components as SelectComponents } from 'react-select';
