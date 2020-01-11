@@ -14,27 +14,64 @@ export type DateTimeFieldOption = {
   display?: string;
 };
 
-export const createOptionForDateTimeField = (d: any): DateTimeFieldOption => {
+const defaultDateFormat = 'MMM DD, YYYY';
+const defaultTimeFormat = 'hh:mm A';
+
+export const createOptionForDateTimeField = (
+  d: any,
+  // eslint-disable-next-line @typescript-eslint/no-inferrable-types
+  hideTime: boolean = false,
+  dateFormat: string = defaultDateFormat,
+  timeFormat: string = defaultTimeFormat
+): DateTimeFieldOption => {
   const date = moment.isMoment(d) ? d : moment(d);
   return {
     date,
     value: date.toDate(),
     label: date.calendar(undefined, {
-      sameDay: '[Today] (Do MMM YYYY)',
-      nextDay: '[Tomorrow] (Do MMM YYYY)',
-      nextWeek: '[Next] dddd (Do MMM YYYY)',
-      lastDay: '[Yesterday] (Do MMM YYYY)',
-      lastWeek: '[Last] dddd (Do MMM YYYY)',
-      sameElse: 'Do MMMM YYYY'
+      sameDay: `[Today] - ${dateFormat} ${
+        hideTime ? '' : timeFormat
+      }`.trimEnd(),
+      nextDay: `[Tomorrow] - ${dateFormat} ${
+        hideTime ? '' : timeFormat
+      }`.trimEnd(),
+      nextWeek: `[Next] dddd - ${dateFormat} ${
+        hideTime ? '' : timeFormat
+      }`.trimEnd(),
+      lastDay: `[Yesterday] - ${dateFormat} ${
+        hideTime ? '' : timeFormat
+      }`.trimEnd(),
+      lastWeek: `[Last] dddd - ${dateFormat} ${
+        hideTime ? '' : timeFormat
+      }`.trimEnd(),
+      sameElse: `${dateFormat} ${hideTime ? timeFormat : ''}`.trimEnd()
     })
   };
 };
 
-export const defaultDateTimeFieldOptions = [
-  'today',
-  'tomorrow',
-  'yesterday'
-].map(i => createOptionForDateTimeField(chrono.parseDate(i)));
+const setDefaultDateTimeFieldOptions = (
+  dates: string[],
+  // eslint-disable-next-line @typescript-eslint/no-inferrable-types
+  hideTime: boolean = false,
+  dateFormat: string = defaultDateFormat,
+  timeFormat: string = defaultTimeFormat
+): DateTimeFieldOption[] => {
+  return dates.map(i =>
+    createOptionForDateTimeField(
+      chrono.parseDate(i),
+      hideTime,
+      dateFormat,
+      timeFormat
+    )
+  );
+};
+
+export const defaultDateTimeFieldOptions = setDefaultDateTimeFieldOptions(
+  ['today', 'tomorrow', 'yesterday'],
+  false,
+  defaultDateFormat,
+  defaultTimeFormat
+);
 
 const suggestions = [
   'sunday',
@@ -85,7 +122,7 @@ const daysHeaderStyles = {
 const daysHeaderItemStyles = {
   color: '#999',
   cursor: 'default',
-  fontSize: '75%',
+  fontSize: '70%',
   fontWeight: 900,
   display: 'inline-block',
   width: '12%',
@@ -109,7 +146,13 @@ const Group = (props: any): ReactElement => {
   } = props;
   return (
     <div aria-label={label} style={getStyles('group', props)} {...innerProps}>
-      <Heading theme={theme} getStyles={getStyles} cx={cx} {...headingProps}>
+      <Heading
+        theme={theme}
+        getStyles={getStyles}
+        style={{ fontSize: '120%', fontWeight: 900, marginTop: '20px' }}
+        cx={cx}
+        {...headingProps}
+      >
         {label}
       </Heading>
       <div style={daysHeaderStyles}>
@@ -173,9 +216,21 @@ const Option = (props: any): ReactElement => {
 
 export type DateTimeFieldProps = {
   name: string;
-  touched?: boolean;
   label: string;
   placeholder: string;
+  /**
+   * Override the default date format. e.g. DD/MM/YYYY, MM/DD/YYYY
+   */
+  dateFormat?: string;
+  /**
+   * Override the default time format. e.g. hh:mm A, H.mm
+   */
+  timeFormat?: string;
+  /**
+   * Hides the time part of the date
+   */
+  hideTime?: boolean;
+  touched?: boolean;
   error?: string;
   disabled?: boolean;
   currentValue?: DateTimeFieldOption;
@@ -191,7 +246,12 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
   useEffect(() => {
     if (props.currentValue) {
       setOptions([
-        createOptionForDateTimeField(props.currentValue.value),
+        createOptionForDateTimeField(
+          props.currentValue.value,
+          props.hideTime,
+          props.dateFormat,
+          props.timeFormat
+        ),
         createCalendarOptions(props.currentValue.value)
       ]);
     }
@@ -199,16 +259,25 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
 
   const handleInputChange = (value: any): any => {
     if (!value) {
-      setOptions(defaultDateTimeFieldOptions);
+      setOptions(
+        setDefaultDateTimeFieldOptions(
+          ['today', 'tomorrow', 'yesterday'],
+          props.hideTime,
+          props.dateFormat,
+          props.timeFormat
+        )
+      );
       return;
     }
     const date = chrono.parseDate(suggest(value.toLowerCase()));
     if (date) {
-      // if (props.onChange) {
-      //   props.onChange(createOptionForDateTimeField(date));
-      // }
       setOptions([
-        createOptionForDateTimeField(date),
+        createOptionForDateTimeField(
+          date,
+          props.hideTime,
+          props.dateFormat,
+          props.timeFormat
+        ),
         createCalendarOptions(date)
       ]);
     } else {
@@ -235,7 +304,7 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
         isOptionSelected={(o, v): boolean =>
           v.some(i => i.date.isSame(o.date, 'day'))
         }
-        maxMenuHeight={380}
+        maxMenuHeight={390}
         options={options}
         onChange={props.onChange}
         onInputChange={handleInputChange}
