@@ -1,7 +1,6 @@
 # modus-ui
 
-> ![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red 'Work in progress')
-> [![Netlify Status](https://api.netlify.com/api/v1/badges/4f69940d-59f6-47e9-98ed-0846b75fae40/deploy-status)](https://app.netlify.com/sites/modus-ui/deploys)
+> ![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red 'Work in progress') > [![Netlify Status](https://api.netlify.com/api/v1/badges/4f69940d-59f6-47e9-98ed-0846b75fae40/deploy-status)](https://app.netlify.com/sites/modus-ui/deploys)
 
 #### Modus - definition 📖
 
@@ -35,6 +34,13 @@ https://modus-ui.netlify.com
 2.  Install all dependencies. Run `npm i`
 3.  To run the and watch for changes for UI. `npm start`
 4.  To run storybook in the project. `npm run storybook`
+
+## Peer Dependencies
+
+`modus-ui` stands on the shoulders of these great packages. 🤝
+
+- SelectField wraps - https://github.com/jedwatson/react-select
+- DateTimeField parsing - https://github.com/wanasit/chrono and https://github.com/moment/moment/
 
 ---
 

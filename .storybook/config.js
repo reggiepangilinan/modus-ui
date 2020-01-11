@@ -3,7 +3,8 @@ import { addDecorator, addParameters, configure } from '@storybook/react';
 import { create } from '@storybook/theming';
 const modusUITheme = create({
   base: 'light',
-  brandTitle: 'Modus UI'
+  brandTitle: 'Modus UI',
+  brandImage: 'media/modus-ui-logo.png'
 });
 
 // addDecorator(withKnobs);
