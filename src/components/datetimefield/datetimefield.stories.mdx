@@ -1,0 +1,207 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import {
+  DateTimeField,
+  createOptionForDateTimeField,
+  defaultDateTimeFieldOptions
+} from '../datetimefield/datetimefield.component';
+import { DateTimeFieldControlled } from '../datetimefield/datetimefield.morestories';
+
+<Meta title="Components|DateTimeField" component={DateTimeField} />
+
+# DateTimeField
+
+The `<DateTimeField/>` component is based on `react-select` experimental date picker. It was extended to be compatible with `modus-ui`
+Check this link for the original date picker https://react-select.com/advanced.
+
+I have to warn you though, this component is a bit different from other datetime picker out there. It is not like a calendar 🗓
+wherein you scroll or select your way to. Coz who wants to scroll and click all the way back to the 1950s? Thats boooring.
+
+This one is smart 😜🎓. You can talk to it (almost) and it understands your feelings.
+Thanks to this awesome library `chrono-node` https://www.npmjs.com/package/chrono-node
+
+You can enter phrases or values like
+
+- Today, Tomorrow, Yesterday, Last Friday, etc
+- Next week
+- 10months from now
+- 30years ago
+
+Or something really weird like
+
+> I'll be home at 2.30am 311days from now
+
+And it automatically suggests a matching date.
+
+# ✨😎🗓🤸‍♀️✨
+
+> Just remember Peter, Great power comes with great responsibility. Always validate your inputs - Uncle Ben 🕷
+
+#### Known limitations
+
+- End of day, month, year is currently not supported.
+- Holidays are not supported
+
+### Props
+
+<Props of={DateTimeField} />
+
+## Default
+
+```
+  <DateTimeField
+    onChange={datefieldoption => {
+      alert(datefieldoption.value);
+    }}
+    currentValue={undefined}
+  />
+```
+
+<Story name="Default">
+  <DateTimeField
+    onChange={datefieldoption => {
+      alert(datefieldoption.value);
+    }}
+    currentValue={undefined}
+  />
+</Story>
+
+## Controlled Component
+
+A sample of the `DateTimeField` bounded to a react state. If you're using a form library like `formik`
+then just wrap this component with whatever statemanagement they have.
+
+```
+  const [state, setstate] = useState<DateTimeFieldOption>();
+  return (
+    <DateTimeField
+      name="dateTimeFieldControlled"
+      onChange={(dateTimeFieldOption: DateTimeFieldOption): void => {
+        setstate(dateTimeFieldOption);
+      }}
+      label="This is a controlled date time field"
+      placeholder="MM/DD/YYYY"
+      currentValue={state}
+    />
+  );
+};
+```
+
+<Story name="Controlled DateTimeField">
+  <DateTimeFieldControlled />
+</Story>
+
+## With label and placeholder
+
+```
+  <DateTimeField
+    label="This is a date field with placeholder"
+    placeholder="MM/DD/YYYY"
+    currentValue={undefined}
+  />
+```
+
+<Story name="With Label">
+  <DateTimeField
+    label="This is a date field with placeholder"
+    placeholder="MM/DD/YYYY"
+    currentValue={undefined}
+  />
+</Story>
+
+## With custom date format time hidden
+
+```
+  <DateTimeField
+    label="This is a date field custom date format time hidden"
+    placeholder="MM/DD/YYYY"
+    hideTime
+    dateFormat="MM/DD/YYYY"
+    currentValue={undefined}
+  />
+```
+
+<Story name="With custom date format and time is hidden">
+  <DateTimeField
+    label="This is a date field custom date format with time hidden"
+    placeholder="MM/DD/YYYY"
+    hideTime
+    dateFormat="MM/DD/YYYY"
+    currentValue={undefined}
+  />
+</Story>
+
+## With value
+
+When specifiying a value it is required to wrap a known date value (string or Date object)
+with the `createOptionForDateTimeField` function.
+
+```
+  <DateTimeField
+    label="This is a date field with value"
+    placeholder="MM/DD/YYYY"
+    currentValue={createOptionForDateTimeField('2001-01-01')}
+  />
+```
+
+<Story name="With Value">
+  <DateTimeField
+    label="This is a date field with value"
+    placeholder="MM/DD/YYYY"
+    currentValue={createOptionForDateTimeField('2001-01-01')}
+  />
+</Story>
+
+## With Error
+
+The error replaces the label, so make sure you provide an error message that provides context. 🧙‍♂️
+
+```
+  <DateTimeField
+    label="This is a date field with placeholder"
+    placeholder="MM/DD/YYYY"
+    currentValue={undefined}
+    touched={true}
+    error={'This is a sample error message'}
+  />
+```
+
+<Story name="With Error">
+  <DateTimeField
+    label="This is a date field with placeholder"
+    placeholder="MM/DD/YYYY"
+    currentValue={undefined}
+    touched={true}
+    error={'This is a sample error message'}
+  />
+</Story>
+
+## Disabled
+
+What it looks like when it's disabled.
+
+```
+  <DateTimeField
+    label="This is a date field is disabled"
+    placeholder="MM/DD/YYYY"
+    currentValue={undefined}
+    disabled
+  />
+```
+
+<Story name="Disabled">
+  <DateTimeField
+    label="This is a date field is disabled"
+    placeholder="MM/DD/YYYY"
+    currentValue={undefined}
+    disabled
+  />
+</Story>
+
+<Story name="Disabled with value">
+  <DateTimeField
+    label="This is a date field is disabled with value"
+    placeholder="MM/DD/YYYY"
+    currentValue={createOptionForDateTimeField('2001-01-01')}
+    disabled
+  />
+</Story>

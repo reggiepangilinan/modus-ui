@@ -1,0 +1,17 @@
+@import '../../styles/animations.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/themes.scss';
+
+.dateTimeField {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $space-xs;
+  }
+  .labelError {
+    color: $error-color;
+  }
+  margin-bottom: $space-xs;
+}

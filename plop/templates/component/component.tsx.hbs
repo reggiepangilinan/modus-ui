@@ -1,13 +1,13 @@
 import React, { FC, ReactElement } from 'react';
 
-import styles from './{{name}}.styles.scss';
+import styles from './{{lowerCase name}}.styles.scss';
 
-export type {{titleCase name}}Props = {
+export type {{pascalCase name}}Props = {
   //Your props goes here
   text: string;
 };
 
-export const {{titleCase name}}: FC<{{titleCase name}}Props> = (props: {{titleCase name}}Props): ReactElement => {
+export const {{pascalCase name}}: FC<{{pascalCase name}}Props> = (props: {{pascalCase name}}Props): ReactElement => {
   //Your components goes here
   return <div className={styles.{{camelCase name}} }>{props.text}</div>;
 };
