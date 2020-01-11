@@ -13,3 +13,4 @@ export * from './components/button/button.component';
 export * from './components/iconbutton/iconbutton.component';
 export * from './components/avatar/avatar.component';
 export * from './components/selectfield/selectfield.component';
+export * from './components/datetimefield/datetimefield.component';
