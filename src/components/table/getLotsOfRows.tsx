@@ -20,6 +20,7 @@ export const getLotsOfRows = (): ReactNode => {
             type={IconTypes.ellipsis}
             transform={IconAngle.NegativeNinety}
             size={IconSize.XSmall}
+            isSquare
           />
         </TableCell>
       </TableRow>
