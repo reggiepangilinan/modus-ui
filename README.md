@@ -1,6 +1,6 @@
 # modus-ui
 
-> ![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red 'Work in progress') > [![Netlify Status](https://api.netlify.com/api/v1/badges/4f69940d-59f6-47e9-98ed-0846b75fae40/deploy-status)](https://app.netlify.com/sites/modus-ui/deploys)
+> ![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red 'Work in progress')  [![Netlify Status](https://api.netlify.com/api/v1/badges/4f69940d-59f6-47e9-98ed-0846b75fae40/deploy-status)](https://app.netlify.com/sites/modus-ui/deploys)
 
 #### Modus - definition 📖
 
