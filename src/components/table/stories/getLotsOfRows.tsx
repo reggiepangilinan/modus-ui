@@ -1,9 +1,9 @@
 import React, { ReactElement, ReactNode } from 'react';
 
-import { IconAngle, IconSize } from '../icon/icon.component';
-import { IconTypes } from '../icon/icontypes.enum';
-import { IconButton } from '../iconbutton/iconbutton.component';
-import { TableCell, TableRow } from '../table/table.component';
+import { IconAngle, IconSize } from '../../icon/icon.component';
+import { IconTypes } from '../../icon/icontypes.enum';
+import { IconButton } from '../../iconbutton/iconbutton.component';
+import { TableCell, TableRow } from '../../table/table.component';
 
 export const getLotsOfRows = (): ReactNode => {
   const rows = new Array<ReactElement>();

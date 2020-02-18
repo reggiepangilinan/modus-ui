@@ -1,0 +1,77 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { RadioButtonGroup } from '../radiobuttongroup/radiobuttongroup.component';
+import { BaseStory } from '../radiobuttongroup/stories/baseStory';
+
+<Meta title="Components|RadioButtonGroup" component={RadioButtonGroup} />
+
+# RadioButtonGroup
+
+The `<RadioButtonGroup/>` component is used for selections that has one definitive answer.
+
+Example Gender, Civil Status etc.
+
+### Props
+
+<Props of={RadioButtonGroup} />
+
+## Default
+
+```
+const options: RadioButtonGroupOption[] = [
+  { id: 'hot', text: 'This is Hot', value: 'hot' },
+  { id: 'cold', text: 'This is Cold', value: 'cold' }
+];
+
+const [value, setvalue] = useState();
+
+  <RadioButtonGroup
+    label={props.label}
+    disabled={props.disabled}
+    options={options}
+    value={value}
+    onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+      setvalue(e.target.value);
+    }}
+  />
+```
+
+<Story name="Default">
+  <BaseStory />
+</Story>
+
+## With label
+
+<Story name="WithLabel">
+  <BaseStory label="This is a label" />
+</Story>
+
+## Disabled
+
+<Story name="Disabled">
+  <BaseStory label="This is a label" disabled />
+</Story>
+
+## With error
+
+<Story name="WithError">
+  <BaseStory
+    label="This is a label"
+    touched
+    error="Something is not right here"
+  />
+</Story>
+
+## Disabled with value
+
+<Story name="DisabledWithValue">
+  <BaseStory label="This is a label" disabled value="hot" />
+</Story>
+
+## Items style overriden
+
+By default items style is using `display: flex` with `flexDirection: column`
+if you need a horizontal layout just set `itemsStyle={{ flexDirection: 'row' }}`
+
+<Story name="ItemStyle">
+  <BaseStory label="This is a label" itemsStyle={{ flexDirection: 'row' }} />
+</Story>

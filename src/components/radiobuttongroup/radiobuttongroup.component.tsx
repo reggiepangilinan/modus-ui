@@ -42,7 +42,6 @@ export const RadioButtonGroup: FunctionComponent<RadioButtonGroupProps> = (
             (option: RadioButtonGroupOption): ReactElement => (
               <label className={styles.radioButton} key={option.id}>
                 <input
-                  name={option.text}
                   type="radio"
                   value={option.value}
                   checked={props.value === option.value}
