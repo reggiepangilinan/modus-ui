@@ -1,0 +1,18 @@
+@import '../../styles/animations.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/themes.scss';
+
+%card {
+  background: $neutral-color-l4;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.cardDefault {
+  @extend %card;
+  box-shadow: 0 0px 3px 0 darken($neutral-color, 5%);
+}
+
+.cardOutline {
+  @extend %card;
+}

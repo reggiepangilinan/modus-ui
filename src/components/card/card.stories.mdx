@@ -1,0 +1,77 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { Card } from '../card/card.component';
+
+<Meta
+  title="Components|Card"
+  component={Card}
+  decorators={[storyFn => <div>{storyFn()}</div>]}
+/>
+
+# Card
+
+The `<Card/>` Component.
+
+### Props
+
+<Props of={Card} />
+
+## Default
+
+By default a `<Card/>` is a `block` element so it will take up the whole block
+
+It's up to the children how the content will look, modus-ui will provide a blank slate for flexibility.
+
+<Story name="Default">
+  <Card id={'default-card'}>
+    <p
+      style={{
+        display: 'flex',
+        margin: '100px',
+        justifyContent: 'center',
+        fontWeight: 800
+      }}
+    >
+      Faster, Faster, Until the thrill of speed overcomes the fear of death.
+      -Hunter S. Thompson
+    </p>
+  </Card>
+</Story>
+
+Source code
+
+```
+  <Card id={'default-card'}>
+    <p style={{ display: 'flex', margin: '50px', justifyContent: 'center' }}>
+      Faster, Faster, Until the thrill of speed overcomes the fear of death. -
+      Hunter S. Thompson
+    </p>
+  </Card>
+```
+
+## With height and width
+
+A card with `height` and `width` specified
+
+<Story name="WithHeightWidth">
+  <Card
+    id={'default-card-height-width'}
+    style={{ height: '250px', width: '250px' }}
+  >
+    <h1 style={{ margin: '30px', color: 'orange' }}>
+      This is not for everybody
+    </h1>
+  </Card>
+</Story>
+
+Source code
+
+```
+ <Card
+    id={'default-card-height-width'}
+    style={{ height: '250px', width: '250px' }}
+  >
+    <h1 style={{ margin: '30px', color: 'orange' }}>
+      This is not for everybody
+    </h1>
+  </Card>
+```
