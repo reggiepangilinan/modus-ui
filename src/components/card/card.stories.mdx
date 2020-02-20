@@ -1,5 +1,7 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { Card } from '../card/card.component';
+import { CardWithTabs } from '../card/stories/cardWithTabs';
+import { Tab, TabItem } from '../tabs/tabs.component';
 
 <Meta
   title="Components|Card"
@@ -74,4 +76,86 @@ Source code
       This is not for everybody
     </h1>
   </Card>
+```
+
+## Outline
+
+Sometimes you just want a clean outline.
+
+<Story name="Outline">
+  <Card id={'outline-card'} type="outline">
+    <p
+      style={{
+        display: 'flex',
+        margin: '100px',
+        justifyContent: 'center',
+        fontWeight: 800
+      }}
+    >
+      That's not just friendship, that's romance, too ❤️
+    </p>
+  </Card>
+</Story>
+
+Source code
+
+```
+  <Card id={'outline-card'} type="outline">
+    <p
+      style={{
+        display: 'flex',
+        margin: '100px',
+        justifyContent: 'center',
+        fontWeight: 800
+      }}
+    >
+      That's not just friendship, that's romance, too
+    </p>
+  </Card>
+```
+
+## With tabs
+
+A card with multiple tabs
+
+<Story name="CardWithTabs">
+  <CardWithTabs />
+</Story>
+
+Source code
+
+```
+const [currentTab, setcurrentTab] = useState(1);
+  const contentStyle = {
+    display: 'flex',
+    margin: '100px',
+    justifyContent: 'center',
+    fontWeight: 800
+  };
+  return (
+    <Card>
+      <Tabs>
+        <TabItem
+          label={'Tito'}
+          active={currentTab === 1}
+          onClick={(): void => setcurrentTab(1)}
+        />
+        <TabItem
+          label={'Vic'}
+          active={currentTab === 2}
+          onClick={(): void => setcurrentTab(2)}
+        />
+        <TabItem
+          label={'Joey'}
+          active={currentTab === 3}
+          onClick={(): void => setcurrentTab(3)}
+        />
+      </Tabs>
+      {currentTab === 1 && (
+        <p style={contentStyle}>{`Can't you see I'm trying`}</p>
+      )}
+      {currentTab === 2 && <p style={contentStyle}>{`I don't even like it`}</p>}
+      {currentTab === 3 && <p style={contentStyle}>{`Is this it?`}</p>}
+    </Card>
+  );
 ```

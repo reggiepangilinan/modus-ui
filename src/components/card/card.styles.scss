@@ -15,4 +15,5 @@
 
 .cardOutline {
   @extend %card;
+  border: 0.5px solid $neutral-color;
 }
