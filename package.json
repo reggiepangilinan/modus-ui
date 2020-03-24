@@ -90,7 +90,7 @@
     "rollup-plugin-typescript2": "0.24.3",
     "rollup-plugin-url": "3.0.0",
     "sass-loader": "8.0.0",
-    "ts-loader": "6.2.1",
+    "ts-loader": "6.2.2",
     "typescript": "3.7.5",
     "url-loader": "2.2.0"
   },
