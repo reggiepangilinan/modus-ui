@@ -1,0 +1,26 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { Header } from '../header/header.component';
+
+<Meta
+  title="Components|Header"
+  component={Header}
+  decorators={[storyFn => <div>{storyFn()}</div>]}
+/>
+
+# Header
+
+The `<Header/>` Component.
+
+<Props of={Header} />
+
+## Default
+
+<Story name="Default">
+  <Header></Header>
+</Story>
+
+## With shadow
+
+<Story name="WithShadow">
+  <Header type="withshadow"></Header>
+</Story>

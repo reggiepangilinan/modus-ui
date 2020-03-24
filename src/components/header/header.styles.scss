@@ -1,0 +1,21 @@
+@import '../../styles/animations.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/themes.scss';
+
+%header {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: $header-height;
+  padding: $space-xs $space-sm;
+  background-color: $component-header-color;
+}
+
+.headerDefault {
+  @extend %header;
+}
+
+.headerWithShadow {
+  @extend %header;
+  box-shadow: 0px $size-5px $size-10px darken($neutral-color, 5%);
+}

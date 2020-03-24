@@ -22,3 +22,37 @@ $space-lg: 30px;
 $space-xl: 40px;
 $space-xxl: 50px;
 ```
+
+## Z-Index
+
+This is a guide to the `z-index` system that modus-ui.
+
+### Element hierarchy
+
+- Tooltips and Popup
+
+  Relative to the container `z-index: 2`
+
+- Modal Dialog
+
+  Ideally the topmost which has `z-index: 999`
+
+- SideNav
+
+  Just below the modal / dialog but higher than the header `z-index: 900`
+
+- Header
+
+  Just below the sidenav but higher than most components `z-index: 700`
+
+```
+-- Header
+$z-index-700:  700;
+
+-- SideNav
+$z-index-900:  900;
+
+-- Just in case there are elements above the modal dialog
+$z-index-1200:  1200;
+$z-index-1500:  1500;
+```
