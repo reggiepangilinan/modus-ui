@@ -45,7 +45,7 @@
     "@storybook/addon-docs": "5.3.13",
     "@storybook/addon-info": "5.3.13",
     "@storybook/addon-links": "5.3.13",
-    "@storybook/addons": "5.3.13",
+    "@storybook/addons": "5.3.17",
     "@storybook/preset-typescript": "1.2.0",
     "@storybook/react": "5.3.13",
     "@svgr/rollup": "2.4.1",
