@@ -28,7 +28,6 @@ jobs:
       env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
   publish-netlify:
-    name: 'Deploy'
     runs-on: ubuntu-latest
 
     steps:
