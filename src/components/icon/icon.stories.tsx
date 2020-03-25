@@ -1,9 +1,4 @@
-import React, {
-  FunctionComponent,
-  PropsWithChildren,
-  ReactElement,
-  ReactNode
-} from 'react';
+import React, { FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
 
 import { FlexWrapStory } from '../../story-wrappers/flex-wrap-story/flex-wrap-story.component';
 import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-around-story.component';
@@ -16,7 +11,7 @@ export default {
 };
 
 type ItemProps = {} & PropsWithChildren<ReactNode>;
-const Item: FunctionComponent<ItemProps> = (props: ItemProps): ReactElement => (
+const Item: FC<ItemProps> = (props: ItemProps): ReactElement => (
   <span
     style={{
       display: 'flex',
@@ -30,25 +25,20 @@ const Item: FunctionComponent<ItemProps> = (props: ItemProps): ReactElement => (
 
 //TODO: Might be converted to a decorator. We'll see 🤗
 type TitleProps = {} & PropsWithChildren<ReactNode>;
-const Title: FunctionComponent<TitleProps> = (
-  props: TitleProps
-): ReactElement => <h2 style={{ margin: '0px 0px 40px' }}>{props.children}</h2>;
+const Title: FC<TitleProps> = (props: TitleProps): ReactElement => (
+  <h2 style={{ margin: '0px 0px 40px' }}>{props.children}</h2>
+);
 
 export const allIcons = (): ReactElement => (
   <>
     <Title>There are {Object.keys(IconTypes).length} icons</Title>
     <FlexWrapStory>
-      {Object.keys(IconTypes).map(key => {
-        return (
-          <Item key={key}>
-            <Icon
-              type={Object(IconTypes)[key]}
-              style={{ marginRight: '10px' }}
-            />
-            <label>{key}</label>
-          </Item>
-        );
-      })}
+      {Object.keys(IconTypes).map(key => (
+        <Item key={key}>
+          <Icon type={Object(IconTypes)[key]} style={{ marginRight: '10px' }} />
+          <label>{key}</label>
+        </Item>
+      ))}
     </FlexWrapStory>
   </>
 );

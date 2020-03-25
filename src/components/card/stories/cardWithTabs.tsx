@@ -1,13 +1,11 @@
-import React, { FunctionComponent, ReactElement, useState } from 'react';
+import React, { FC, ReactElement, useState } from 'react';
 
 import { TabItem, Tabs } from '../../tabs/tabs.component';
 import { Card } from '../card.component';
 
 export type CardWithTabsProps = {};
 
-export const CardWithTabs: FunctionComponent<
-  CardWithTabsProps
-> = (): ReactElement => {
+export const CardWithTabs: FC<CardWithTabsProps> = (): ReactElement => {
   const [currentTab, setcurrentTab] = useState(1);
   const contentStyle = {
     display: 'flex',
