@@ -76,7 +76,7 @@
     "prettier-plugin-import-sort": "0.0.4",
     "prop-types": "15.7.2",
     "react": "16.13.1",
-    "react-docgen-typescript-loader": "3.6.0",
+    "react-docgen-typescript-loader": "3.7.1",
     "react-dom": "16.12.0",
     "react-scripts-ts": "4.0.8",
     "react-select": "3.0.4",
