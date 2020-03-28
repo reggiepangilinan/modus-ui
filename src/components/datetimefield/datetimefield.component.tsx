@@ -48,6 +48,14 @@ export const createOptionForDateTimeField = (
     })
   };
 };
+const dedupe = (arr: any[]): any[] => {
+  return arr.filter(
+    (elem, index, self) =>
+      self.findIndex(t => {
+        return t.label === elem.label;
+      }) === index
+  );
+};
 
 const setCurrentDateFieldOptions = (
   dates: string[],
@@ -56,7 +64,7 @@ const setCurrentDateFieldOptions = (
   dateFormat: string = defaultDateFormat,
   timeFormat: string = defaultTimeFormat
 ): DateTimeFieldOption[] => {
-  return dates.map(i =>
+  const dateTimeOptions = dates.map(i =>
     createOptionForDateTimeField(
       chrono.parseDate(i),
       hideTime,
@@ -64,6 +72,7 @@ const setCurrentDateFieldOptions = (
       timeFormat
     )
   );
+  return dedupe(dateTimeOptions);
 };
 
 const suggestions = [
@@ -240,23 +249,27 @@ export type DateTimeFieldProps = {
 export const DateTimeField: FC<DateTimeFieldProps> = (
   props: DateTimeFieldProps
 ): ReactElement => {
+  const currentDateFormat = props.dateFormat
+    ? props.dateFormat
+    : defaultDateFormat;
   const currentDateFieldOptions = setCurrentDateFieldOptions(
     ['today', 'tomorrow', 'yesterday'],
     props.hideTime ? props.hideTime : false,
-    props.dateFormat ? props.dateFormat : defaultDateFormat,
+    currentDateFormat,
     props.timeFormat ? props.timeFormat : defaultTimeFormat
   );
+
   currentDateFieldOptions.push(
     createCalendarOptions(
-      new Date(),
+      props.currentValue ? props.currentValue.value : new Date(),
       props.hideTime,
       props.dateFormat,
       props.timeFormat
     )
   );
+
   const [options, setOptions] = useState(currentDateFieldOptions);
   const displayError = props.touched && props.error;
-
   useEffect(() => {
     if (props.currentValue) {
       setOptions([
@@ -318,9 +331,20 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
         value={props.currentValue}
         components={{ Group, Option }}
         filterOption={null}
-        isOptionSelected={(o, v): boolean =>
-          v.some(i => i.date.isSame(o.date, 'day'))
-        }
+        isOptionSelected={(value, options): boolean => {
+          const selected = options.some(
+            i =>
+              i.date.format(currentDateFormat) ===
+              value.date.format(currentDateFormat)
+          );
+          if (selected) {
+            console.log(value);
+            console.log(options);
+            console.log(selected);
+          }
+
+          return selected;
+        }}
         maxMenuHeight={390}
         options={options}
         onChange={props.onChange}
