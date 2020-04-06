@@ -48,7 +48,7 @@
     "@rollup/plugin-url": "4.0.2",
     "@storybook/addon-actions": "5.3.17",
     "@storybook/addon-docs": "5.3.18",
-    "@storybook/addon-info": "5.3.17",
+    "@storybook/addon-info": "5.3.18",
     "@storybook/addon-links": "5.3.17",
     "@storybook/addons": "5.3.17",
     "@storybook/preset-typescript": "3.0.0",
