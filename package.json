@@ -46,7 +46,7 @@
     "@rollup/plugin-commonjs": "11.0.2",
     "@rollup/plugin-node-resolve": "7.1.1",
     "@rollup/plugin-url": "4.0.2",
-    "@storybook/addon-actions": "5.3.17",
+    "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-docs": "5.3.18",
     "@storybook/addon-info": "5.3.18",
     "@storybook/addon-links": "5.3.17",
