@@ -74,7 +74,7 @@
     "import-sort-style-module": "6.0.0",
     "moment": "2.25.3",
     "node-sass": "4.13.1",
-    "plop": "2.6.0",
+    "plop": "2.7.1",
     "prettier": "2.0.5",
     "prettier-plugin-import-sort": "0.0.4",
     "prop-types": "15.7.2",
