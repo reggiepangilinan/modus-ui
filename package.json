@@ -41,7 +41,7 @@
     "moment": "^2.24.0"
   },
   "devDependencies": {
-    "@babel/core": "7.9.0",
+    "@babel/core": "7.10.2",
     "@babel/runtime": "7.10.2",
     "@rollup/plugin-commonjs": "11.1.0",
     "@rollup/plugin-node-resolve": "7.1.3",
