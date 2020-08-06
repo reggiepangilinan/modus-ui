@@ -13,8 +13,7 @@ export type InputFieldProps = {
   autoFocus?: boolean;
   min?: string;
   max?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  value?: any;
+  value?: string | number;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };

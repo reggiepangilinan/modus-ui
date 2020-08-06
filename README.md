@@ -4,6 +4,8 @@
 
 ![alt text](https://raw.githubusercontent.com/reggiepangilinan/modus-ui/master/static/media/modus-ui-abstract.svg?sanitize=true)
 
+![CI](https://github.com/reggiepangilinan/modus-ui/workflows/CI/badge.svg)
+
 #### Modus - definition 📖
 
 > "Way in which anything is done."
