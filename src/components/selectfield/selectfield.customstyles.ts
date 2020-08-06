@@ -55,5 +55,9 @@ export const customStyles: any = {
       backgroundColor:
         !state.isDisabled && (state.isSelected ? '#33333' : '#ffba54')
     }
+  }),
+  menu: (base: any) => ({
+    ...base,
+    zIndex: 99999
   })
 };

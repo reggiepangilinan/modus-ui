@@ -6,6 +6,9 @@ import styles from './iconbutton.styles.scss';
 export type IconButtonProps = {
   onClick?: () => void;
   kind?: IconButtonKind;
+  /**
+   * @ignore
+   */
   type: IconTypes;
   style?: CSSProperties;
   transform?: IconAngle | string;
