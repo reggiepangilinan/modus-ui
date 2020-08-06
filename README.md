@@ -2,7 +2,7 @@
 
 ![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red 'Work in progress') [![Netlify Status](https://api.netlify.com/api/v1/badges/4f69940d-59f6-47e9-98ed-0846b75fae40/deploy-status)](https://app.netlify.com/sites/modus-ui/deploys) [![npm version](https://badge.fury.io/js/modus-ui.svg)](https://badge.fury.io/js/modus-ui)
 
-![alt text](https://raw.githubusercontent.com/reggieboyYEAH/modus-ui/master/static/media/modus-ui-abstract.svg?sanitize=true)
+![alt text](https://raw.githubusercontent.com/reggiepangilinan/modus-ui/master/static/media/modus-ui-abstract.svg?sanitize=true)
 
 #### Modus - definition 📖
 
@@ -24,7 +24,7 @@ To install
 npm i --save modus-ui
 ```
 
-**modus-ui** is open-source. Here is the link to repo https://github.com/reggieboyYEAH/modus-ui
+**modus-ui** is open-source. Here is the link to repo https://github.com/reggiepangilinan/modus-ui
 
 ## Demo
 
@@ -48,4 +48,4 @@ https://modus-ui.netlify.com
 
 ### License
 
-MIT © [reggieboyYEAH](https://github.com/reggieboyYEAH)
+MIT © [reggiepangilinan](https://github.com/reggiepangilinan)
