@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import { InputField } from '../inputfield/inputfield.component';
 
 export default {
-  title: 'Components|InputField',
+  title: 'Components/InputField',
   component: InputField
 };
 

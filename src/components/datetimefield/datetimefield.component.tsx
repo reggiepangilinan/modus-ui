@@ -337,15 +337,15 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
               i.date.format(currentDateFormat) ===
               value.date.format(currentDateFormat)
           );
-          if (selected) {
-            console.log(value);
-            console.log(options);
-            console.log(selected);
-          }
+          // if (selected) {
+          //   console.log(value);
+          //   console.log(options);
+          //   console.log(selected);
+          // }
 
           return selected;
         }}
-        maxMenuHeight={390}
+        maxMenuHeight={425}
         options={options}
         onChange={props.onChange}
         onInputChange={handleInputChange}

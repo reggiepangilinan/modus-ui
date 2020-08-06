@@ -6,7 +6,7 @@ import { Icon, IconAngle, IconSize } from '../icon/icon.component';
 import { IconTypes } from '../icon/icontypes.enum';
 
 export default {
-  title: 'Components|Icons',
+  title: 'Components/Icons',
   component: Icon
 };
 

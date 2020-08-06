@@ -5,7 +5,7 @@ import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-
 import { Status, StatusType } from '../status/status.component';
 
 export default {
-  title: 'Components|Status',
+  title: 'Components/Status',
   component: Status
 };
 

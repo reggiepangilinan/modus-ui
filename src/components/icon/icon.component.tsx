@@ -19,6 +19,9 @@ export enum IconSize {
 
 export type IconProps = {
   block?: 'block' | 'inline-block';
+  /**
+   * @ignore
+   */
   type: IconTypes;
   style?: CSSProperties;
   transform?: IconAngle | string;
