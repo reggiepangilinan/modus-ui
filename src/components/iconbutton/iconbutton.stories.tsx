@@ -6,7 +6,7 @@ import { IconTypes } from '../icon/icontypes.enum';
 import { IconButton, IconButtonKind } from '../iconbutton/iconbutton.component';
 
 export default {
-  title: 'Components/IconButton',
+  title: '2-Components/IconButton',
   component: IconButton,
   decorators: [
     (storyFn: () => ReactNode): ReactElement => (

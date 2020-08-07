@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import { Checkbox } from '../checkbox/checkbox.component';
 
 export default {
-  title: 'Components/Checkbox',
+  title: '2-Components/Checkbox',
   component: Checkbox
 };
 
@@ -30,7 +30,7 @@ disabledChecked.story = {
 
 export const withError = (): ReactElement => (
   <Checkbox
-    text={`Can't click me`}
+    text={`Am I sorry I have error?`}
     error={'Oops something is wrong.'}
     touched
   />

@@ -7,20 +7,31 @@ import React, {
 
 import styles from './tabs.styles.scss';
 
-export type TabsProps = {} & PropsWithChildren<ReactNode>;
+export type TabsProps = PropsWithChildren<ReactNode>;
 
+export type TabItemProps = {
+  label: string;
+  active?: boolean;
+  /**
+   * @ignore
+   */
+  onClick?: () => void;
+};
+
+/**
+ *<Tabs/>
+ * @param props
+ */
 export const Tabs: FunctionComponent<TabsProps> = (
   props: TabsProps
 ): ReactElement => {
   return <div className={styles.tabsContainer}>{props.children}</div>;
 };
 
-export type TabItemProps = {
-  label: string;
-  active?: boolean;
-  onClick?: () => void;
-};
-
+/**
+ *<TabItem/>
+ * @param props
+ */
 export const TabItem: FunctionComponent<TabItemProps> = (
   props: TabItemProps
 ): ReactElement => {

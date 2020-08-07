@@ -1,10 +1,8 @@
 # modus-ui
 
-![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red 'Work in progress') [![Netlify Status](https://api.netlify.com/api/v1/badges/4f69940d-59f6-47e9-98ed-0846b75fae40/deploy-status)](https://app.netlify.com/sites/modus-ui/deploys) [![npm version](https://badge.fury.io/js/modus-ui.svg)](https://badge.fury.io/js/modus-ui)
+![alt text](https://img.shields.io/badge/Unstable-WorkInPorgress-red 'Work in progress') [![Netlify Status](https://api.netlify.com/api/v1/badges/4f69940d-59f6-47e9-98ed-0846b75fae40/deploy-status)](https://app.netlify.com/sites/modus-ui/deploys) [![npm version](https://badge.fury.io/js/modus-ui.svg)](https://badge.fury.io/js/modus-ui) ![CI](https://github.com/reggiepangilinan/modus-ui/workflows/CI/badge.svg)
 
 ![alt text](https://raw.githubusercontent.com/reggiepangilinan/modus-ui/master/static/media/modus-ui-abstract.svg?sanitize=true)
-
-![CI](https://github.com/reggiepangilinan/modus-ui/workflows/CI/badge.svg)
 
 #### Modus - definition 📖
 

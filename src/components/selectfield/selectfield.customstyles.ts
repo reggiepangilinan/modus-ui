@@ -58,6 +58,6 @@ export const customStyles: any = {
   }),
   menu: (base: any) => ({
     ...base,
-    zIndex: 99999
+    zIndex: 600 // Follow the proximity guide
   })
 };

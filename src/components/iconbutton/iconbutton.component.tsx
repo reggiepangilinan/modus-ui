@@ -47,7 +47,7 @@ export const IconButton: FunctionComponent<IconButtonProps> = (
     disabled={props.disabled}
   >
     <Icon
-      block={'inline-block'}
+      block={'block'}
       size={props.size}
       type={props.type}
       transform={props.transform}

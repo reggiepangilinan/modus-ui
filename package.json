@@ -13,16 +13,16 @@
     "npm": ">=6"
   },
   "scripts": {
-    "plop": "plop",
+    "plop": "plop && npm run prettier",
     "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
     "test:watch": "react-scripts-ts test --env=jsdom",
     "build": "rollup -c",
     "start": "npm run lint && rollup -c -w",
     "lint": "eslint --fix --ext js,ts,tsx src",
+    "prettier": "prettier --write src/",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build",
-    "storybook": "start-storybook -p 6006 -s ./public,./static --docs",
+    "storybook": "npm run prettier && npm run lint && start-storybook -p 6006 -s ./public,./static --docs",
     "build-storybook": "build-storybook -s ./public,./static --docs"
   },
   "importSort": {
@@ -58,7 +58,6 @@
     "@types/react-dom": "16.9.5",
     "@typescript-eslint/eslint-plugin": "2.25.0",
     "@typescript-eslint/parser": "2.25.0",
-    "awesome-typescript-loader": "5.2.1",
     "babel-loader": "8.1.0",
     "chrono-node": "1.4.6",
     "cross-env": "7.0.2",
@@ -68,7 +67,6 @@
     "eslint-plugin-prettier": "3.1.3",
     "eslint-plugin-react-hooks": "4.0.0",
     "file-loader": "4.2.0",
-    "gh-pages": "1.2.0",
     "handlebars-helpers": "^0.10.0",
     "import-sort-style-module": "6.0.0",
     "moment": "2.26.0",
@@ -78,7 +76,6 @@
     "prettier-plugin-import-sort": "0.0.4",
     "prop-types": "15.7.2",
     "react": "16.13.1",
-    "react-docgen-typescript-loader": "3.7.2",
     "react-dom": "16.12.0",
     "react-scripts-ts": "4.0.8",
     "react-select": "3.1.0",

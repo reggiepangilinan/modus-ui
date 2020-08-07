@@ -5,7 +5,7 @@ import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-
 import { Avatar, AvatarSize } from '../avatar/avatar.component';
 
 export default {
-  title: 'Components/Avatar',
+  title: '2-Components/Avatar',
   component: Avatar
 };
 

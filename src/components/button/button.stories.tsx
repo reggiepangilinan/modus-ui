@@ -6,7 +6,7 @@ import { IconTypes } from '../icon/icontypes.enum';
 import { Button, ButtonKind } from './button.component';
 
 export default {
-  title: 'Components/Button',
+  title: '2-Components/Button',
   component: Button
 };
 /**

@@ -3,7 +3,7 @@ import React, { ReactElement } from 'react';
 import { Spinner } from '../spinner/spinner.component';
 
 export default {
-  title: 'Components/Spinner',
+  title: '2-Components/Spinner',
   component: Spinner,
   parameters: {
     componentSubtitle: 'This is a spinner'
