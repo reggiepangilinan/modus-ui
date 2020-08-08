@@ -19,26 +19,26 @@
 }
 
 .success {
-  background-color: $success-color;
-  color: $neutral-color-l4;
+  background-color: var(--success-color);
+  color: var(--neutral-color-l4);
 }
 
 .info {
-  background-color: $info-color;
-  color: $neutral-color-l4;
+  background-color: var(--info-color);
+  color: var(--neutral-color-l4);
 }
 
 .warning {
-  background-color: $warning-color;
-  color: $neutral-color-l4;
+  background-color: var(--warning-color);
+  color: var(--neutral-color-l4);
 }
 
 .error {
-  background-color: $error-color;
-  color: $neutral-color-l4;
+  background-color: var(--error-color);
+  color: var(--neutral-color-l4);
 }
 
 .light {
-  background-color: darken($neutral-color-l4, 10%);
-  color: lighten($neutral-color-d4, 30%);
+  background-color: var(--neutral-color-l1);
+  color: var(--neutral-color-d3);
 }

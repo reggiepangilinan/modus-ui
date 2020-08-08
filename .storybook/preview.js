@@ -1,4 +1,7 @@
-import { addParameters } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
+import React from 'react';
+
+import { ModusUI } from '../src/components/modusui/modusui.component';
 
 addParameters({
   options: {
@@ -8,3 +11,5 @@ addParameters({
         : a[1].id.localeCompare(b[1].id, undefined, { numeric: true })
   }
 });
+
+addDecorator(storyFn => <ModusUI>{storyFn()}</ModusUI>);

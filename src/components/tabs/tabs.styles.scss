@@ -4,7 +4,7 @@
 
 .tabsContainer {
   display: flex;
-  border-bottom: 1px solid $neutral-color;
+  border-bottom: 1px solid var(--neutral-color);
 }
 
 %tabItemBase {
@@ -21,17 +21,17 @@
   font-weight: 600;
   .tabActive {
     @extend %tabItemBase;
-    color: $brand-primary-color;
+    color: var(--brand-primary-color);
     &:hover {
-      background-color: darken($neutral-color-l4, 7%);
+      background-color: var(--neutral-color-l1);
     }
-    border-bottom: 1.5px solid $brand-primary-color;
+    border-bottom: 1.5px solid var(--brand-primary-color);
   }
   .tab {
     @extend %tabItemBase;
-    color: lighten($neutral-color-d4, 35%);
+    color: var(--neutral-color-d3);
     &:hover {
-      background-color: darken($neutral-color-l4, 2%);
+      background-color: var(--neutral-color-l2);
     }
   }
 }

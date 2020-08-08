@@ -5,7 +5,7 @@ html,
 body {
   font-family: $font-family;
   font-size: $base-font-size;
-  color: $neutral-color-d4;
+  color: var(--neutral-color-d4);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -16,7 +16,7 @@ body {
     background-color: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    border: 3px solid $neutral-color-d1;
+    border: 3px solid var(--neutral-color-d1);
   }
 }
 

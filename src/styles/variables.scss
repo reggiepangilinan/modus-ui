@@ -3,9 +3,9 @@
 // TYPOGRAPHY
 $font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
   'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-  'Helvetica Neue', sans-serif !default;
+  'Helvetica Neue', sans-serif;
 $font-family-code: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace !default;
+  monospace;
 
 $base-font-size: 14px;
 $font-size-xs: 12px;
@@ -24,15 +24,15 @@ $font-weight-bold: 700;
 
 $border-radius: 3px;
 $border-width-xs: 0.5px;
-$border-width-sm: 1.5px;
+$border-width-sm: 1px;
 $border-width-md: 2px;
 
 $size-5px: 5px;
 $size-10px: 10px;
 $size-20px: 20px;
 $height-32px: 32px;
-$transition-fast: 300ms !default;
-$transition-slow: 500ms !default;
+$transition-fast: 200ms;
+$transition-slow: 300ms;
 
 //SPACE SIZES
 $space-xs: 5px;
@@ -43,4 +43,4 @@ $space-xl: 40px;
 $space-xxl: 50px;
 
 //HEADER
-$header-height: 50px !default;
+$header-height: 50px;

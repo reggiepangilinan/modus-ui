@@ -18,7 +18,7 @@
   .labelError {
     font-size: $font-size-xs;
     font-weight: $font-weight-semibold;
-    color: $error-color;
+    color: var(--error-color);
   }
 
   .checkbox {
@@ -41,23 +41,23 @@
       width: $size-20px;
       height: $size-20px;
       border-radius: $border-radius;
-      background: $neutral-color-l4;
-      box-shadow: 0 0 0 $border-width-sm $brand-primary-color inset;
+      background: var(--neutral-color-l4);
+      box-shadow: 0 0 0 $border-width-sm var(--brand-primary-color) inset;
     }
 
     // Box hover
     &:hover + p:before {
-      background: $brand-secondary-color-l2;
+      background: var(--brand-secondary-color-l2);
     }
 
     // Box focus
     &:focus + p:before {
-      box-shadow: 0 0 0 $border-width-sm $brand-primary-color inset;
+      box-shadow: 0 0 0 $border-width-sm var(--brand-primary-color) inset;
     }
 
     // Box checked
     &:checked + p:before {
-      background: $brand-primary-color;
+      background: var(--brand-primary-color);
     }
 
     // Disabled state p.
@@ -67,8 +67,8 @@
 
     // Disabled box.
     &:disabled + p:before {
-      box-shadow: 0 0 0 $border-width-sm $neutral-color inset;
-      background: $neutral-color;
+      box-shadow: 0 0 0 $border-width-sm var(--neutral-color) inset;
+      background: var(--neutral-color);
     }
 
     // Checkmark. Could be replaced with an image
@@ -77,13 +77,14 @@
       position: absolute;
       left: 4.5px;
       top: 8.5px;
-      background: $neutral-color-l4;
+      background: var(--neutral-color-l4);
       width: 2.5px;
       height: 2.5px;
       transform: rotate(45deg);
-      box-shadow: 2px 0 0 $neutral-color-l4, 4px 0 0 $neutral-color-l4,
-        4px -2px 0 $neutral-color-l4, 4px -4px 0 $neutral-color-l4,
-        4px -6px 0 $neutral-color-l4, 4px -8px 0 $neutral-color-l4;
+      box-shadow: 2px 0 0 var(--neutral-color-l4),
+        4px 0 0 var(--neutral-color-l4), 4px -2px 0 var(--neutral-color-l4),
+        4px -4px 0 var(--neutral-color-l4), 4px -6px 0 var(--neutral-color-l4),
+        4px -8px 0 var(--neutral-color-l4);
     }
   }
 }

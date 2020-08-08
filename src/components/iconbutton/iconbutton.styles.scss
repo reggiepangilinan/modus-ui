@@ -16,80 +16,80 @@
 
 .primarySquareIconButton {
   @extend %iconButton;
-  background-color: $brand-primary-color;
-  color: $neutral-color-l4;
+  background-color: var(--brand-primary-color);
+  color: var(--neutral-color-l4);
   &:hover {
-    background-color: $brand-primary-color-d2;
+    background-color: var(--brand-primary-color-d2);
   }
   &:active {
-    background-color: $brand-primary-color-d2;
+    background-color: var(--brand-primary-color-d2);
   }
   &:disabled {
-    background-color: $brand-primary-color-l2;
+    background-color: var(--brand-primary-color-l2);
   }
   svg {
-    fill: $neutral-color-l4;
+    fill: var(--neutral-color-l4);
   }
 }
 
 .defaultSquareIconButton {
   @extend %iconButton;
-  background-color: $neutral-color-l1;
-  color: $brand-primary-color;
+  background-color: var(--neutral-color-l1);
+  color: var(--brand-primary-color);
   &:hover {
-    background-color: $neutral-color;
+    background-color: var(--neutral-color);
   }
   &:active {
-    background-color: $neutral-color;
+    background-color: var(--neutral-color);
   }
   &:disabled {
-    color: $neutral-color-d1;
-    background-color: $neutral-color-l2;
+    color: var(--neutral-color-d1);
+    background-color: var(--neutral-color-l2);
     svg {
-      fill: $neutral-color-d1;
+      fill: var(--neutral-color-d1);
     }
   }
   svg {
-    fill: $brand-primary-color;
+    fill: var(--brand-primary-color);
   }
 }
 
 .primaryRoundIconButton {
   @extend %iconButton;
   border-radius: 100%;
-  background-color: $brand-primary-color;
-  color: $neutral-color-l4;
+  background-color: var(--brand-primary-color);
+  color: var(--neutral-color-l4);
   &:hover {
-    background-color: $brand-primary-color-d2;
+    background-color: var(--brand-primary-color-d2);
   }
   &:active {
-    background-color: $brand-primary-color-d2;
+    background-color: var(--brand-primary-color-d2);
   }
   &:disabled {
-    background-color: $brand-primary-color-l2;
+    background-color: var(--brand-primary-color-l2);
   }
   svg {
-    fill: $neutral-color-l4;
+    fill: var(--neutral-color-l4);
   }
 }
 .defaultRoundIconButton {
   @extend %iconButton;
   border-radius: 100%;
-  background-color: $neutral-color-l1;
+  background-color: var(--neutral-color-l1);
   &:hover {
-    background-color: $neutral-color;
+    background-color: var(--neutral-color);
   }
   &:active {
-    background-color: $neutral-color;
+    background-color: var(--neutral-color);
   }
   &:disabled {
-    color: $neutral-color-d1;
-    background-color: $neutral-color-l2;
+    color: var(--neutral-color-d1);
+    background-color: var(--neutral-color-l2);
     svg {
-      fill: $neutral-color-d1;
+      fill: var(--neutral-color-d1);
     }
   }
   svg {
-    fill: $brand-primary-color;
+    fill: var(--brand-primary-color);
   }
 }

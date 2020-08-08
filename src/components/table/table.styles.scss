@@ -8,7 +8,7 @@
 }
 
 .table {
-  background-color: $neutral-color-l4;
+  background-color: var(--neutral-color-l4);
   display: table;
   width: 100%;
   border-collapse: collapse;
@@ -23,10 +23,10 @@
   }
 
   thead th {
-    background-color: $neutral-color-l4;
+    background-color: var(--neutral-color-l4);
     font-weight: $font-weight-bold;
     font-size: $font-size-xs;
-    color: $brand-primary-color;
+    color: var(--brand-primary-color);
     height: 33px;
     padding: $space-xs $space-sm;
     position: sticky;
@@ -38,7 +38,7 @@
 
     &::after {
       bottom: 0px;
-      border-bottom-color: $neutral-color-d1;
+      border-bottom-color: var(--neutral-color-d1);
       border-bottom-width: $border-width-sm;
       border-bottom-style: solid;
     }
@@ -52,12 +52,12 @@
 
   tbody tr {
     @include fadein;
-    border-bottom-color: $neutral-color;
+    border-bottom-color: var(--neutral-color);
     border-bottom-width: $border-width-xs;
     border-bottom-style: solid;
     transition: all $transition-slow ease-in-out;
     &:hover {
-      background-color: $neutral-color-l3;
+      background-color: var(--neutral-color-l3);
     }
 
     td:first-child {
@@ -82,7 +82,7 @@
   text-align: center;
   p {
     font-weight: $font-weight-semibold;
-    color: $neutral-color-d2;
+    color: var(--neutral-color-d2);
     margin-top: $space-md;
   }
 }

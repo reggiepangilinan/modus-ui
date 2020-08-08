@@ -18,7 +18,7 @@
     .labelError {
       font-weight: $font-weight-semibold;
       font-size: $font-size-xs;
-      color: $error-color;
+      color: var(--error-color);
     }
     .items {
       display: flex;
@@ -45,27 +45,27 @@
     cursor: pointer;
 
     &:checked ~ .checkmark:after {
-      display: block;
-      margin: 0px;
+      //display: block;
+      //margin: 0px;
     }
     &:checked ~ .checkmark {
-      background-color: $brand-primary-color;
-      border: $border-width-sm solid $brand-primary-color;
+      background-color: var(--brand-primary-color);
+      border: $border-width-sm solid var(--brand-primary-color);
     }
 
     &:disabled ~ .checkmark {
-      border: $border-width-sm solid $neutral-color;
-      background: $neutral-color;
+      border: $border-width-sm solid var(--neutral-color);
+      background: var(--neutral-color);
       cursor: not-allowed;
     }
 
     &:checked:disabled ~ .checkmark {
-      border: $border-width-sm solid $neutral-color;
+      border: $border-width-sm solid var(--neutral-color);
       cursor: not-allowed;
     }
     &:checked:disabled ~ .checkmark:after {
       display: block;
-      background: $neutral-color-l4;
+      background: var(--neutral-color-l4);
       cursor: not-allowed;
     }
   }
@@ -82,44 +82,45 @@
     left: 0;
     min-height: $size-20px;
     min-width: $size-20px;
-    background-color: $neutral-color-l4;
-    border: $border-width-sm solid darken($neutral-color, 30%);
+    background-color: var(--neutral-color-l4);
+    border: $border-width-sm solid var(--neutral-color-d2);
     border-radius: 50%;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &:after {
       content: ' ';
-      top: 4.7px;
-      left: 4.9px;
-      position: relative;
-      width: $size-10px + 1;
-      height: $size-10px + 1;
+      margin: auto;
+      width: $size-10px;
+      height: $size-10px;
       border-radius: 50%;
-      background: $neutral-color-l4;
+      background: var(--neutral-color-l4);
       text-align: center;
       align-items: center;
     }
   }
 
   &:hover input ~ .checkmark {
-    background-color: $brand-secondary-color-l2;
-    border: $border-width-sm solid $brand-primary-color;
+    background-color: var(--brand-secondary-color-l2);
+    border: $border-width-sm solid var(--brand-primary-color);
   }
 
   &:hover input:checked ~ .checkmark {
-    background-color: $brand-primary-color-d2;
-    border: $border-width-sm solid $brand-primary-color;
+    background-color: var(--brand-primary-color-d2);
+    border: $border-width-sm solid var(--brand-primary-color);
   }
 
   &:hover input:disabled ~ .checkmark {
-    border: $border-width-sm solid $neutral-color;
-    background: $neutral-color;
+    border: $border-width-sm solid var(--neutral-color);
+    background: var(--neutral-color);
     cursor: not-allowed;
   }
 
   &:hover input:checked:disabled ~ .checkmark {
-    border: $border-width-sm solid $neutral-color;
-    background: $neutral-color;
+    border: $border-width-sm solid var(--neutral-color);
+    background: var(--neutral-color);
     cursor: not-allowed;
   }
 }

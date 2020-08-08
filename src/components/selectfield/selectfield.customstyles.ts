@@ -49,7 +49,7 @@ export const customStyles: any = {
     ...base,
     color: !state.isDisabled && (state.isSelected ? '#fffff' : '#333333'), //Neutral Color L4 + Neutral Color D4
     backgroundColor:
-      !state.isDisabled && (state.isSelected ? '#56677c' : '#fffff'), //Brand Primary Color L1 + Neutral Color L4
+      !state.isDisabled && (state.isSelected ? '#ffba54' : '#fffff'), //Brand Secondary Color L2 + Neutral Color L4
 
     ':active': {
       backgroundColor:

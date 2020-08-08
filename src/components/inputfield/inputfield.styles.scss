@@ -11,28 +11,28 @@
     margin-bottom: 5px;
   }
   .labelError {
-    color: $error-color;
+    color: var(--error-color);
   }
   input {
-    color: $neutral-color-d4;
+    color: var(--neutral-color-d4);
     font-family: $font-family;
     font-size: $base-font-size;
     line-height: 20px;
     border-radius: 3px;
     padding: 0px 10px;
     height: 30px;
-    border: 1px solid $neutral-color-d1;
+    border: 1px solid var(--neutral-color-d1);
     &:focus {
       outline: none;
-      border: 1px solid $brand-primary-color;
+      border: 1px solid var(--brand-primary-color);
     }
 
     &:disabled {
-      background-color: $neutral-color-l1;
-      color: $neutral-color-d2;
+      background-color: var(--neutral-color-l1);
+      color: var(--neutral-color-d2);
     }
     &::placeholder {
-      color: $neutral-color-d1;
+      color: var(--neutral-color-d1);
     }
   }
   margin-bottom: 5px;

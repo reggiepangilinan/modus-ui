@@ -17,5 +17,5 @@
 
 .headerWithShadow {
   @extend %header;
-  box-shadow: 0px $size-5px $size-10px darken($neutral-color, 5%);
+  box-shadow: 0px $size-5px $size-10px var(--neutral-color);
 }

@@ -10,7 +10,7 @@
     margin-bottom: $space-xs;
   }
   .labelError {
-    color: $error-color;
+    color: var(--error-color);
   }
   margin-bottom: $space-xs;
 }

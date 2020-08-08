@@ -1,0 +1,34 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { SpaceAroundStory } from '../../story-wrappers/space-around-story/space-around-story.component';
+import { Button, ButtonKind } from '../button/button.component';
+import { ModusUI } from '../modusui/modusui.component';
+
+<Meta
+  title="2-Components/ModusUI"
+  component={ModusUI}
+  decorators={[storyFn => <SpaceAroundStory>{storyFn()}</SpaceAroundStory>]}
+/>
+
+# ModusUI
+
+The `<ModusUI/>` Component.
+
+<Props of={ModusUI} />
+
+## Default
+
+<Preview>
+  <Story name="Default">
+    <ModusUI
+      theme={{
+        colors: {
+          brandPrimaryD2: 'maroon',
+          brandPrimary: 'red'
+        }
+      }}
+    >
+      <Button kind={ButtonKind.Primary} text="Primary" />
+      <Button kind={ButtonKind.Default} text="Default" />
+    </ModusUI>
+  </Story>
+</Preview>

@@ -7,12 +7,12 @@
 }
 
 %avatarDefault {
-  background-color: $neutral-color;
+  background-color: var(--neutral-color);
   border-radius: 50%;
   overflow: hidden;
 
   svg {
-    fill: $neutral-color-l2;
+    fill: var(--neutral-color-l2);
     position: relative;
     bottom: -2px;
     height: 100%;
