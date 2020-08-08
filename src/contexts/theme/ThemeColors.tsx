@@ -36,4 +36,9 @@ export type ThemeColors = {
   neutralL2: string;
   neutralL3: string;
   neutralL4: string;
+
+  textPrimary: string;
+  textPrimaryDisabled: string;
+  textBrand: string;
+  textBrandDisabled: string;
 };

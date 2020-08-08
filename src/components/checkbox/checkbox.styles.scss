@@ -62,7 +62,7 @@
 
     // Disabled state p.
     &:disabled + p {
-      cursor: auto;
+      cursor: not-allowed;
     }
 
     // Disabled box.

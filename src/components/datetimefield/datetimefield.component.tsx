@@ -4,6 +4,7 @@ import React, { FC, ReactElement, useEffect, useState } from 'react';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Select, { components as SelectComponents } from 'react-select';
 
+import { useTheme } from '../../contexts/theme/theme.context';
 import { customStyles } from '../selectfield/selectfield.customstyles';
 import styles from '../selectfield/selectfield.styles.scss';
 
@@ -249,6 +250,8 @@ export type DateTimeFieldProps = {
 export const DateTimeField: FC<DateTimeFieldProps> = (
   props: DateTimeFieldProps
 ): ReactElement => {
+  const { theme } = useTheme();
+
   const currentDateFormat = props.dateFormat
     ? props.dateFormat
     : defaultDateFormat;
@@ -323,7 +326,7 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
         <label> {props.label} </label>
       )}
       <Select
-        styles={customStyles}
+        styles={customStyles(theme, '320px')}
         isDisabled={props.disabled}
         isMulti={false}
         isClearable

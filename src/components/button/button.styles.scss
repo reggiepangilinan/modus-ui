@@ -39,7 +39,7 @@
 .buttonPrimary {
   @extend %button;
   background-color: var(--brand-primary-color);
-  color: var(--neutral-color-l4);
+  color: var(--text-color-brand);
   &:hover {
     background-color: var(--brand-primary-color-d2);
   }
@@ -50,14 +50,13 @@
     background-color: var(--brand-primary-color-l2);
   }
   svg {
-    fill: var(--neutral-color-l4);
+    fill: var(--text-color-brand-disabled);
   }
 }
 
 .buttonDefault {
   @extend %button;
   background-color: var(--neutral-color-l1);
-  color: var(--brand-primary-color);
   &:hover {
     background-color: var(--neutral-color);
   }
@@ -65,25 +64,22 @@
     background-color: var(--neutral-color);
   }
   &:disabled {
-    color: var(--neutral-color-d1);
+    color: var(--text-color-primary-disabled);
     background-color: var(--neutral-color-l2);
     svg {
-      fill: var(--neutral-color-d1);
+      fill: var(--text-color-primary-disabled);
     }
   }
   svg {
-    fill: var(--brand-primary-color);
+    fill: var(--text-color-primary);
   }
 }
 
 .buttonLink {
   @extend %button;
   background-color: var(--neutral-color-l4);
-  a {
-    color: var(--brand-primary-color);
-  }
   &:disabled {
-    color: var(--neutral-color-d1);
+    color: var(--text-color-primary-disabled);
     text-decoration: underline;
   }
 }
@@ -91,7 +87,6 @@
 .buttonGhost {
   @extend %button;
   background-color: var(--neutral-color-l3);
-  color: var(--brand-primary-color);
   &:hover {
     background-color: var(--neutral-color-l1);
   }
@@ -99,13 +94,13 @@
     background-color: var(--neutral-color-l1);
   }
   &:disabled {
-    color: var(--neutral-color-d1);
+    color: var(--text-color-primary-disabled);
     background-color: var(--neutral-color-l2);
     svg {
-      fill: var(--neutral-color-d1);
+      fill: var(--text-color-primary-disabled);
     }
   }
   svg {
-    fill: var(--brand-primary-color);
+    fill: var(--text-color-primary-disabled);
   }
 }

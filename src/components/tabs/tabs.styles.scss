@@ -25,7 +25,7 @@
     &:hover {
       background-color: var(--neutral-color-l1);
     }
-    border-bottom: 1.5px solid var(--brand-primary-color);
+    border-bottom: $border-width-sm solid var(--brand-primary-color);
   }
   .tab {
     @extend %tabItemBase;

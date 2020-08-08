@@ -29,7 +29,8 @@
 
     &:disabled {
       background-color: var(--neutral-color-l1);
-      color: var(--neutral-color-d2);
+      color: var(--text-color-primary-disabled);
+      cursor: not-allowed;
     }
     &::placeholder {
       color: var(--neutral-color-d1);

@@ -1,5 +1,6 @@
 import { Theme } from './Theme';
-export const defaultTheme = {
+export const lightTheme = {
+  type: 'light',
   colors: {
     brandPrimaryD2: '#223040',
     brandPrimaryD1: '#293a4e',
@@ -37,6 +38,11 @@ export const defaultTheme = {
     neutralL1: '#eeeeee',
     neutralL2: '#f3f3f3',
     neutralL3: '#f8f8f8',
-    neutralL4: '#ffffff'
+    neutralL4: '#ffffff',
+
+    textPrimary: '#333333',
+    textPrimaryDisabled: '#666666',
+    textBrand: '#ffffff',
+    textBrandDisabled: '#ffffff'
   }
 } as Theme;

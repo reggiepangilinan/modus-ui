@@ -17,7 +17,7 @@
 .primarySquareIconButton {
   @extend %iconButton;
   background-color: var(--brand-primary-color);
-  color: var(--neutral-color-l4);
+  color: var(--text-color-brand);
   &:hover {
     background-color: var(--brand-primary-color-d2);
   }
@@ -58,7 +58,7 @@
   @extend %iconButton;
   border-radius: 100%;
   background-color: var(--brand-primary-color);
-  color: var(--neutral-color-l4);
+  color: var(--text-color-brand);
   &:hover {
     background-color: var(--brand-primary-color-d2);
   }

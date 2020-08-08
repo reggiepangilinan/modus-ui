@@ -3,6 +3,7 @@
 import React, { FunctionComponent, ReactElement } from 'react';
 import Select from 'react-select';
 
+import { useTheme } from '../../contexts/theme/theme.context';
 import { customStyles } from './selectfield.customstyles';
 import styles from './selectfield.styles.scss';
 
@@ -31,6 +32,7 @@ export const SelectField: FunctionComponent<Props> = (
   props: Props
 ): ReactElement => {
   const displayError = props.touched && props.error;
+  const { theme } = useTheme();
   return (
     <div className={styles.selectField}>
       {displayError ? (
@@ -39,7 +41,7 @@ export const SelectField: FunctionComponent<Props> = (
         <label> {props.label} </label>
       )}
       <Select
-        styles={customStyles}
+        styles={customStyles(theme)}
         isDisabled={props.disabled}
         isSearchable={props.searchable}
         isClearable={props.clearable}

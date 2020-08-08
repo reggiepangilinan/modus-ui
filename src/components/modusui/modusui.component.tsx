@@ -4,7 +4,7 @@ import { Theme } from '../../contexts/theme/Theme';
 import { ThemeProvider } from '../../contexts/theme/theme.context';
 
 export type ModusUIProps = {
-  theme?: Theme;
+  theme: Theme;
 } & PropsWithChildren<ReactNode>;
 
 export const ModusUI: FC<ModusUIProps> = (

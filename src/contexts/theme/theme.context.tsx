@@ -8,18 +8,18 @@ import React, {
   useState
 } from 'react';
 
-import { defaultTheme } from './defaultTheme';
+import { lightTheme } from './lightTheme';
 import { Theme } from './Theme';
 
-type ThemeProviderProps = { theme?: Theme } & PropsWithChildren<ReactNode>;
+type ThemeProviderProps = { theme: Theme } & PropsWithChildren<ReactNode>;
 
 export type ThemeContextState = {
-  theme?: Theme;
-  setTheme: React.Dispatch<React.SetStateAction<Theme | undefined>>;
+  theme: Theme;
+  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
 };
 
 const ThemeContext = createContext<ThemeContextState>({
-  theme: defaultTheme
+  theme: lightTheme
 } as ThemeContextState);
 
 const useTheme = (): ThemeContextState => {
@@ -58,6 +58,11 @@ const renderStyle = (theme: Theme): ReactNode => (
     --error-color: ${theme.colors.error};
     --error-color-l1: ${theme.colors.errorL1};
 
+    --text-color-primary: ${theme.colors.textPrimary}; 
+    --text-color-primary-disabled: ${theme.colors.textPrimaryDisabled}; 
+    --text-color-brand: ${theme.colors.textBrand}; 
+    --text-color-brand-disabled: ${theme.colors.textBrandDisabled}; 
+
     --neutral-color-d4: ${theme.colors.neutralD4};
     --neutral-color-d3: ${theme.colors.neutralD3};
     --neutral-color-d2: ${theme.colors.neutralD2};
@@ -75,13 +80,16 @@ const renderStyle = (theme: Theme): ReactNode => (
 const ThemeProvider = (props: ThemeProviderProps): ReactElement => {
   const [theme, setTheme] = useState<Theme>(
     props.theme
-      ? { colors: { ...defaultTheme.colors, ...props.theme.colors } }
-      : defaultTheme
+      ? {
+          type: props.theme.type,
+          colors: { ...lightTheme.colors, ...props.theme.colors }
+        }
+      : lightTheme
   );
 
   useEffect(() => {
     // eslint-disable-next-line no-console
-    console.log(theme);
+    //console.log(theme);
   }, [theme]);
 
   return (
