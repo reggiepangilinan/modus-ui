@@ -1,4 +1,4 @@
-import chrono from 'chrono-node';
+import * as chrono from 'chrono-node';
 import moment from 'moment';
 import React, { FC, ReactElement, useEffect, useState } from 'react';
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -14,6 +14,21 @@ export type DateTimeFieldOption = {
   label: string;
   display?: string;
 };
+const customChrono = chrono.casual.clone();
+customChrono.refiners.push({
+  refine: (context, results) => {
+    // If there is no AM/PM (meridiem) specified,
+    // Default to 12 AM
+    results.forEach(result => {
+      if (!result.start.isCertain('meridiem')) {
+        result.start.assign('hour', 0);
+        result.start.assign('minute', 0);
+        result.start.assign('second', 0);
+      }
+    });
+    return results;
+  }
+});
 
 const defaultDateFormat = 'MMM DD, YYYY';
 const defaultTimeFormat = 'hh:mm A';
@@ -67,7 +82,7 @@ const setCurrentDateFieldOptions = (
 ): DateTimeFieldOption[] => {
   const dateTimeOptions = dates.map(i =>
     createOptionForDateTimeField(
-      chrono.parseDate(i),
+      customChrono.parseDate(i),
       hideTime,
       dateFormat,
       timeFormat
@@ -184,7 +199,9 @@ const createCalendarOptions = (
   const daysInMonth = Array.apply(undefined, {
     length: moment(date).daysInMonth()
   }).map((_x: any, i) => {
-    const d = moment(date).date(i + 1);
+    const d = moment(date)
+      .startOf('day')
+      .date(i + 1);
     return {
       ...createOptionForDateTimeField(d, hideTime, dateFormat, timeFormat),
       display: 'calendar'
@@ -297,7 +314,7 @@ export const DateTimeField: FC<DateTimeFieldProps> = (
       setOptions(currentDateFieldOptions);
       return;
     }
-    const date = chrono.parseDate(suggest(value.toLowerCase()));
+    const date = customChrono.parseDate(suggest(value.toLowerCase()));
     if (date) {
       setOptions([
         createOptionForDateTimeField(
