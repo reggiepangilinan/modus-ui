@@ -51,13 +51,11 @@ export const customStyles = (theme: Theme, menuMaxWidth?: string): any => {
     }),
     option: (base, state) => ({
       ...base,
-      color: !state.isDisabled && (state.isSelected ? '#fffff' : '#333333'), //Neutral Color L4 + Neutral Color D4
-      backgroundColor:
-        !state.isDisabled && (state.isSelected ? '#ffba54' : '#fffff'), //Brand Secondary Color L2 + Neutral Color L4
+      color: state.isSelected ? '#fffff' : '#333333', //Neutral Color L4 + Neutral Color D4
 
-      ':active': {
-        backgroundColor:
-          !state.isDisabled && (state.isSelected ? '#33333' : '#ffba54') //Neutral Color D4 + Brand Secondary Color L2
+      backgroundColor: state.isFocused ? '#ffab2e' : '#ffff',
+      ':hover': {
+        backgroundColor: '#ffba54'
       }
     }),
     menu: (base: any) => ({
