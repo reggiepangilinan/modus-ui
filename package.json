@@ -50,7 +50,7 @@
     "@storybook/addon-docs": "6.0.0-rc.27",
     "@storybook/addon-info": "5.3.19",
     "@storybook/addon-links": "6.0.0-rc.27",
-    "@storybook/addons": "6.0.0-rc.27",
+    "@storybook/addons": "6.0.22",
     "@storybook/react": "6.0.0-rc.27",
     "@svgr/rollup": "5.3.0",
     "@types/jest": "25.1.4",
