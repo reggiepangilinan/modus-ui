@@ -45,7 +45,7 @@
     "@babel/runtime": "7.11.0",
     "@rollup/plugin-commonjs": "11.1.0",
     "@rollup/plugin-node-resolve": "8.4.0",
-    "@rollup/plugin-url": "5.0.0",
+    "@rollup/plugin-url": "6.0.0",
     "@storybook/addon-actions": "6.0.0-rc.27",
     "@storybook/addon-docs": "6.0.0-rc.27",
     "@storybook/addon-info": "5.3.19",
